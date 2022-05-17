@@ -45,15 +45,22 @@ def variant4():
         year=datetime.now().year
     )
 
-@route('/variant3')
-@view('variant3')
-def contact():
-    """Renders the contact page."""
-    return dict(
-        title='Title',
-        message='Your application description page.',
-        year=datetime.now().year
-    )
+@route('/kruskal')
+@view('kruskal')
+def kruskal():
+    size_ = request.GET.get('sizeMatrix')
+    if (size_ != None):
+        return dict(
+            title='Kruskal',
+            year=datetime.now().year,
+            sizeMat = int(size_)
+            )
+    else:
+        return dict(
+            title='Kruskal',
+            year=datetime.now().year,
+            sizeMat = 3
+            )
 
 @route('/variant4')
 @view('variant4')
