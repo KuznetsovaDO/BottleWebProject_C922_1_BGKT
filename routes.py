@@ -48,18 +48,24 @@ def variant4():
 @route('/kruskal')
 @view('kruskal')
 def kruskal():
-    size_ = request.GET.get('sizeMatrix')
-    if (size_ != None):
+    size_ = request.GET.get('setOfEdges')
+    vert_ = request.GET.get('setOfVertice')
+    if (size_ != None and vert_ != None):
+        max_ = int(int(vert_)*(int(vert_) - 1)/2)
+        if (int(size_) > int(max_)):
+            size_ = max_
         return dict(
             title='Kruskal',
             year=datetime.now().year,
-            sizeMat = int(size_)
+            sizeEdges = int(size_),
+            sizeVertic = int(vert_)
             )
     else:
         return dict(
             title='Kruskal',
             year=datetime.now().year,
-            sizeMat = 3
+            sizeEdges = 1,
+            sizeVertic = 2
             )
 
 @route('/variant4')
