@@ -17,15 +17,20 @@ def home():
 
 
 @route('/variant1')
+@view('variant1')
 def variant1():
-    return 
+   return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year
+    )
 
 @route('/variant2')
 @view('variant2')
 def varian4():
     """Renders the about page."""
     return dict(
-        title='About',
+        title='Title',
         message='Your application description page.',
         year=datetime.now().year
     )
@@ -35,12 +40,17 @@ def varian4():
 def contact():
     """Renders the contact page."""
     return dict(
-        title='Contact',
-        message='Your contact page.',
+        title='Title',
+        message='Your application description page.',
         year=datetime.now().year
     )
 
 @route('/variant4')
+@view('variant4')
 def variant4():
-    return
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year
+    )
 
