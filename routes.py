@@ -2,7 +2,7 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view
+from bottle import route, view, request
 from datetime import datetime
 
 @route('/')
@@ -19,15 +19,25 @@ def home():
 @route('/variant1')
 @view('variant1')
 def variant1():
-   return dict(
+   size_ = request.GET.get('SIZE')
+   if (size_ != None):
+       return dict(
         title='Title',
         message='Your application description page.',
-        year=datetime.now().year
+        year=datetime.now().year,
+        size = int(size_)
+    )
+   else:
+       return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year, 
+        size = 4
     )
 
 @route('/variant2')
 @view('variant2')
-def varian4():
+def variant4():
     """Renders the about page."""
     return dict(
         title='Title',
