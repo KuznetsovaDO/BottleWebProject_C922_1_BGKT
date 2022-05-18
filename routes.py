@@ -16,8 +16,8 @@ def home():
 
 
 
-@route('/variant1')
-@view('variant1')
+@route('/variant2')
+@view('variant2')
 def variant1():
    size_ = request.GET.get('SIZE')
    if (size_ != None):
@@ -35,8 +35,8 @@ def variant1():
         size = 4
     )
 
-@route('/variant2')
-@view('variant2')
+@route('/variant1')
+@view('variant1')
 def variant4():
     """Renders the about page."""
     return dict(
