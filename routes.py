@@ -2,7 +2,7 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, request
+from bottle import route, view, request, response
 from datetime import datetime
 
 @route('/')
@@ -39,10 +39,39 @@ def variant1():
 @view('variant1')
 def variant4():
     """Renders the about page."""
+    size = 5
+    response.set_cookie("size", str(size))
     return dict(
         title='Title',
         message='Your application description page.',
-        year=datetime.now().year
+        year=datetime.now().year,
+        size = size
+    )
+
+@route('/variant1_2')
+@view('variant1')
+def variant4():
+    """Renders the about page."""
+    size = int(request.cookies.size)
+    response.set_cookie("size", str(size+1))
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year,
+        size = size + 1
+    )
+
+@route('/variant1_3')
+@view('variant1')
+def variant4():
+    """Renders the about page."""
+    size = int(request.cookies.size)
+    response.set_cookie("size", str(size-1))
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year,
+        size = size - 1
     )
 
 @route('/kruskal')
