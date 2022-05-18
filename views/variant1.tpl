@@ -19,7 +19,7 @@
                     %for i in range(size):
                     <tr>
                         %for j in range(size):
-                        <td><input type="number" value = "0" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
+                        <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
                         %end
                     </tr>
                     %end
