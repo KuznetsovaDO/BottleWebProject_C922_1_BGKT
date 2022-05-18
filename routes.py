@@ -48,18 +48,16 @@ def new():
     for i in range(size):
         row = []
         for j in range(size):
-            el = request.GET.get(str(i)+'_'+str(j))
-            if (el == '1'):
-                row.append(el)
-            else:
-                row.append(0)
+            row.append(0)
         matrix.append(row)
-
+    # Cчитывание матрицы
     inc = {}
-    for i in range(size+1):
+    for i in range(size):
         tops= []
-        for j in range(size+1):
+        for j in range(size):
             if (str(request.GET.get(str(i)+'_'+str(j)))=='1'):
+                matrix[i][j]=1
+                matrix[j][i]=1
                 tops.append(j)
             inc[i]=tops  
     result = depth_first_search.DFS(inc)
