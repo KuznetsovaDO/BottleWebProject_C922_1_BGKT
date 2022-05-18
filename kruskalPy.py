@@ -10,10 +10,10 @@ def kruskal_yu():
     R = [[]]
     t =""
     for i in range(size_):
-        R.insert(i, [weight_[i], start_[i], final_[i]])
+        R.insert(i, [int(weight_[i]), int(start_[i]), int(final_[i])])
     del(R[size_])
 
-    Rs = sorted(R, key=lambda x: x[0])
+    Rs = sorted(R, key=lambda x: x[0], reverse=False)
     U = set()   # список соединенных вершин
     D = {}      # словарь списка изолированных групп вершин
     T = []      # список ребер остова
@@ -46,7 +46,7 @@ def kruskal_yu():
         for x in i:
             t += "[" + x + "], "
         t += "||"
-    t += "        "
+    t += "<=======>"
     for i in T:
         for x in i:
             t += "[" + x + "], "

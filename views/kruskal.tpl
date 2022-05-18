@@ -12,15 +12,12 @@
 		</form>
 		<form method="post" action="/kruskal" enctype="text">
 			%for i in range(sizeEdges):
-				<input type="number" name="startingVertex" size="3" value = "0" required>
-				<input type="number" name="finalVertex" size="3" value = "0" required>
-				<input type="number" name="ribWeight" size="3" value = "0" required>
+				<input type="number" name="startingVertex" size="3" value = "0" min = "1" max = "{{sizeVertic}}" required>
+				<input type="number" name="finalVertex" size="3" value = "0" min = "1" max = "{{sizeVertic}}" required>
+				<input type="number" name="ribWeight" size="3" value = "0" min = "1" required>
 				<br name="row0">
 				%end
 			<p><input type="submit" value="Send" class="btn btn-default"></p>
-			%from bottle import route, view, request
-			%tet = request.GET.get('setOfVertice')
-			<p>{{tet}}</p>
 		</form>
 		
 	</body>
