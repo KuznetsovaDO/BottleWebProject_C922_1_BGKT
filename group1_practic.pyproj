@@ -34,6 +34,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="width.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -66,11 +69,11 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
-    <Content Include="views\variant2.tpl" />
+    <Content Include="views\variant1.tpl" />
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
-    <Content Include="views\variant1.tpl">
+    <Content Include="views\variant2.tpl">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\variant4.tpl">
