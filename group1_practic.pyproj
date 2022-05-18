@@ -30,7 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="kruskal.py">
+    <Compile Include="kruskalPy.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
