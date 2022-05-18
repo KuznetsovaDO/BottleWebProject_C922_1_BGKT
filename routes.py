@@ -48,7 +48,11 @@ def new():
     for i in range(size):
         row = []
         for j in range(size):
-           row.append(str(request.GET.get(str(i)+'_'+str(j))))
+            el = request.GET.get(str(i)+'_'+str(j))
+            if (el == '1'):
+                row.append(el)
+            else:
+                row.append(0)
         matrix.append(row)
 
     inc = {}
