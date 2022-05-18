@@ -51,15 +51,19 @@ def new():
             row.append(0)
         matrix.append(row)
     # Cчитывание матрицы
-    inc = {}
     for i in range(size):
-        tops= []
         for j in range(size):
             if (str(request.GET.get(str(i)+'_'+str(j)))=='1'):
                 matrix[i][j]=1
                 matrix[j][i]=1
-                tops.append(j)
-            inc[i]=tops  
+
+    inc = {}
+    for i in range(size):
+        row=[]
+        for j in range(size):
+            if (matrix[i][j] == 1):
+                row.append(j)
+        inc[i]=row
     result = depth_first_search.DFS(inc)
 
     return dict(
