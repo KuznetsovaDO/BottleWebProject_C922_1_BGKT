@@ -2,6 +2,7 @@
 This script runs the application using a development server.
 """
 
+import kruskalPy
 import bottle
 import os
 import sys
