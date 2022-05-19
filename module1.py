@@ -22,5 +22,5 @@ def Start():
             f += str(W[i][j]) + " "
         f += "<br>"
     print (f)
-    return ("Matri: "+"<br>"+f+"<br>"+Prima1.prima(W))
+    return ("Matrix: "+"<br>"+f+"<br>"+Prima1.prima(W))
 
