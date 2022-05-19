@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Desktop\practica\rep-2\env"
+VIRTUAL_ENV="C:\Users\LENOVO\source\repos\group1_practic\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

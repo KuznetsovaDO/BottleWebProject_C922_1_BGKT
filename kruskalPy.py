@@ -3,17 +3,19 @@ from array import *
 
 @route('/kruskal', method='post') 
 def kruskal_yu():
+    # получение данных с формы
     weight_ = request.forms.getall('ribWeight')
     start_ = request.forms.getall('startingVertex')
     final_ = request.forms.getall('finalVertex')
     size_ = len(weight_)
     R = [[]]
     t =""
+    # заполнение массива
     for i in range(size_):
         R.insert(i, [int(weight_[i]), int(start_[i]), int(final_[i])])
     del(R[size_])
 
-    Rs = sorted(R, key=lambda x: x[0], reverse=False)
+    Rs = sorted(R, key=lambda x: x[0], reverse=False) # сортировка массива по возрастанию веса
     U = set()   # список соединенных вершин
     D = {}      # словарь списка изолированных групп вершин
     T = []      # список ребер остова
@@ -44,12 +46,12 @@ def kruskal_yu():
 
     for i in R:
         for x in i:
-            t += "[" + x + "], "
+            t += "[" + str(x) + "], "
         t += "||"
     t += "<=======>"
     for i in T:
         for x in i:
-            t += "[" + x + "], "
+            t += "[" + str(x) + "], "
         t += "||"
     return t
 
