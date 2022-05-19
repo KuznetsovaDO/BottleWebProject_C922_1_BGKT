@@ -14,6 +14,10 @@ def kruskal_yu():
     if not(str(vert_) in start_):
         if not(str(vert_) in final_):
             return "graf ne svyazan"
+    else:
+        for i in range(size_):
+            if (start_[i] == final_[i]):
+                return "vvedite znachenya bez petel'"
     R = [[]]
     t =""
     # заполнение массива
