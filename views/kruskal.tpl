@@ -3,7 +3,7 @@
 	
 	<body>
 	<!-- форма для ввода вершин и ребер -->
-		<form>
+		<form name="form1">
 			<p>Enter the number of edges</p>
 			<!-- ввод количества ребер -->
 			<p><input type="number" name="setOfEdges" id="setOfEdgesId" size="3" value = "{{sizeEdges}}"	min="1"></p>
@@ -22,6 +22,8 @@
 				<input type="number" name="ribWeight" size="3" value = "0" min = "1" required>
 				<br name="row0">
 				%end
+				<!-- скрытый элемент для передачи в kruskalPy количества вершин -->
+				<input hidden type="number" name="el1" size="3" value = "{{sizeVertic}}" min = "1" required>
 		<!-- кнопка для отправки формы -->
 			<p><input type="submit" value="Send" class="btn btn-default"></p>
 		</form>

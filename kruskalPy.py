@@ -1,5 +1,6 @@
 from bottle import route, view, request
 from array import *
+import routes
 
 @route('/kruskal', method='post') 
 def kruskal_yu():
@@ -8,6 +9,11 @@ def kruskal_yu():
     start_ = request.forms.getall('startingVertex')
     final_ = request.forms.getall('finalVertex')
     size_ = len(weight_)
+    vert_ = request.forms.get('el1', type=int)
+    # проверка на связанность графа
+    if not(str(vert_) in start_):
+        if not(str(vert_) in final_):
+            return "graf ne svyazan"
     R = [[]]
     t =""
     # заполнение массива
@@ -53,6 +59,7 @@ def kruskal_yu():
         for x in i:
             t += "[" + str(x) + "], "
         t += "||"
+    t += str(vert_)
     return t
 
 

@@ -5,7 +5,6 @@ Routes and views for the bottle application.
 from bottle import route, view, request, response
 from datetime import datetime
 import depth_first_search
-
 @route('/')
 @route('/home')
 @view('index')
