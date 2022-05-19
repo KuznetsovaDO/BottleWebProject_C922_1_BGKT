@@ -27,13 +27,17 @@
 
             <form action = '/variant1_2'><p> </p>
                 <input type="submit" name="nubex" value=" Increase the size of the matrix" />
-                </form>
-                <form action = '/variant1_3'><p> </p>
+            </form>
+
+            <form action = '/variant1_3'><p> </p>
                 <p> </p>
                 <input type="submit" name="nubex" value=" Reduce the size of the matrix" />
             </form>
 
-                
+            <form>
+                <label for="">Dimension of the matrix: {{size}} X {{size}} </label>                 
+            </form>
+            
             </div>
         
     </section>

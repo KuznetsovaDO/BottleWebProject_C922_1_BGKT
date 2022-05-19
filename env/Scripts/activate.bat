@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\diana\Source\Repos\group1_practiс\env
+set VIRTUAL_ENV=D:\Desktop\practica\rep-4\env
 
 if not defined PROMPT set PROMPT=$P$G
 
