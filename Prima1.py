@@ -75,4 +75,4 @@ def prima(W,city_labels = None):
     b='All the way: %s' % str (road_length)
     o=x+z+b
     return o
-    # TODO: return graph.
+    
