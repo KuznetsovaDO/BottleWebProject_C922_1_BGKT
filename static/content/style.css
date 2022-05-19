@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    font-family: Montserrat; /* ׁולויסעגמ רנטפעמג */
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+label {
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+div {
+    justify-content: center;
+}
+input[type=submit] {
+    padding: 5px 15px;
+    background: #92A9BD;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
