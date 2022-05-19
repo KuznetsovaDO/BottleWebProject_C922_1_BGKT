@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 % rebase('layout.tpl', title=title, year=year)
-% rebase('layout.tpl', title=title, year=year)
 
 <html>
 <div class="jumbotron">
 <head>
 <link href="static/content/style.css" rel="stylesheet" type="text/css">
-  <h2 align = center>{{ title }}</h2>
+  <h1 align = center>{{ title }}</h1>
 </head>
 <form action = "/variant4" method="post">
-     <p align=center>{{title_size}}</p>
-     <p align=center>               </p>
-     <p align=center>Enter the number of vertices</p>
+     <label align=center>{{title_size}}</label>
+     <h1> </h1>
+     <h1> </h1>
+     <h1> </h1>
+     <p class="hh2">Enter the number of vertices:</p>
       <style>
        select{width: 150px;}
       </style>
@@ -27,7 +28,7 @@
          </select>
      </p>
     
-     <button class="button button1">{{title_enter}}</button>
+     <button class="button button1 hh2">{{title_enter}}</button>
 </form>
 </div>
 </html>
