@@ -8,11 +8,18 @@ h1 {
 label {
     font-family: Montserrat;
     font-weight: normal;
+    
+}
+.hh2 {
+    font-family: Montserrat;
+    font-weight: normal;
+    text-align: center;
 }
 
 div {
     justify-content: center;
 }
+
 input[type=submit] {
     padding: 5px 15px;
     background: #92A9BD;
@@ -21,3 +28,24 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+.button {
+    border-radius: 12px;
+    background: wight;
+    border-color: #cccccc;
+    color: white;
+    padding: 15px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin: 5% auto;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #4CAF50;
+}
+
