@@ -14,7 +14,7 @@
      <h1> </h1>
      <p class="hh2">Enter the number of vertices:</p>
       <style>
-       select{width: 150px;}
+       select{width: 145px;}
       </style>
      <p align=center>
          <select name = "GetValue">
