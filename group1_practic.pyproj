@@ -39,6 +39,12 @@
     <Compile Include="kruskalPy.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Prima1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
     <Compile Include="width.py">
       <SubType>Code</SubType>

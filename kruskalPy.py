@@ -1,19 +1,31 @@
 from bottle import route, view, request
 from array import *
+import routes
 
 @route('/kruskal', method='post') 
 def kruskal_yu():
+    # получение данных с формы
     weight_ = request.forms.getall('ribWeight')
     start_ = request.forms.getall('startingVertex')
     final_ = request.forms.getall('finalVertex')
     size_ = len(weight_)
+    vert_ = request.forms.get('el1', type=int)
+    # проверка на связанность графа
+    if not(str(vert_) in start_):
+        if not(str(vert_) in final_):
+            return "graf ne svyazan"
+    else:
+        for i in range(size_):
+            if (start_[i] == final_[i]):
+                return "vvedite znachenya bez petel'"
     R = [[]]
     t =""
+    # заполнение массива
     for i in range(size_):
         R.insert(i, [int(weight_[i]), int(start_[i]), int(final_[i])])
     del(R[size_])
 
-    Rs = sorted(R, key=lambda x: x[0], reverse=False)
+    Rs = sorted(R, key=lambda x: x[0], reverse=False) # сортировка массива по возрастанию веса
     U = set()   # список соединенных вершин
     D = {}      # словарь списка изолированных групп вершин
     T = []      # список ребер остова
@@ -44,13 +56,14 @@ def kruskal_yu():
 
     for i in R:
         for x in i:
-            t += "[" + x + "], "
+            t += "[" + str(x) + "], "
         t += "||"
     t += "<=======>"
     for i in T:
         for x in i:
-            t += "[" + x + "], "
+            t += "[" + str(x) + "], "
         t += "||"
+    t += str(vert_)
     return t
 
 

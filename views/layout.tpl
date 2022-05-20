@@ -25,7 +25,7 @@
                     <li><a href="/variant1">Variant 1</a></li>
                     <li><a href="/variant2">Variant 2</a></li>
                     <li><a href="/kruskal">Algoritm Kruskal</a></li>
-                    <li><a href="/variant4">Variant 4</a></li>
+                    <li><a href="/variant4">The Prim`s algorithm</a></li>
                 </ul>
             </div>
         </div>
