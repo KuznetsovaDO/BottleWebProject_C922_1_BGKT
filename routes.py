@@ -50,6 +50,7 @@ def new():
         for j in range(size):
             row.append(0)
         matrix.append(row)
+
     # Cчитывание матрицы
     for i in range(size):
         for j in range(size):
@@ -109,6 +110,27 @@ def variant4():
     """Renders the about page."""
     size = int(request.cookies.size)
     response.set_cookie("size", str(size-1))
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year,
+        size = size - 1
+    )
+
+@route('/variant1_4')
+@view('variant1')
+def variant4():
+    """Renders the about page."""
+    #считывание матрицы в массив
+    size = int(request.cookies.size)
+    adj_matrix = []
+    for i in range(size):
+        row = []
+        for j in range(size):
+            row.append(int(request.GET.get(str(i)+'_'+str(j))))
+        adj_matrix.append(row)
+    
+    
     return dict(
         title='Title',
         message='Your application description page.',

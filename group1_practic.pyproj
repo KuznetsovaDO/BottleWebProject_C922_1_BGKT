@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="breadth_first_search.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="depth_first_search.py">
       <SubType>Code</SubType>
     </Compile>
