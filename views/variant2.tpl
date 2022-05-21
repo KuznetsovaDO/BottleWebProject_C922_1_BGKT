@@ -41,6 +41,8 @@
                 <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
             </div>
         </div>
+
+        <p>{{error}}</p>
      
         <!-- Таблица для вводы матрицы -->
         <table align="center">
