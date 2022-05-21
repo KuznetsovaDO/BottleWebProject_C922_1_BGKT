@@ -18,7 +18,8 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="breadth_first_search.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="depth_first_search.py">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +47,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="test_Prima1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="width.py">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +58,7 @@
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
+    <Folder Include="static\img\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -66,6 +74,10 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\img\gr1.jpg" />
+    <Content Include="static\img\gr2.jpg" />
+    <Content Include="static\img\mat.JPG" />
+    <Content Include="static\img\mat2.JPG" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
@@ -81,7 +93,15 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
-    <Content Include="views\kruskalRez.tpl" />
+    <Content Include="views\about.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\primansw.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\primex.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\variant1.tpl" />
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />
@@ -94,6 +114,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env3\">
+      <Id>env3</Id>
+      <Version>3.9</Version>
+      <Description>env3 (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.9</Version>

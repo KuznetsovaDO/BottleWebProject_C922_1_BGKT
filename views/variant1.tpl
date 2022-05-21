@@ -15,6 +15,7 @@
 
     <section>
             <div style="padding: 15px;" >
+            <form action='/variant1_4'>
                 <table><tbody>
                     %for i in range(size):
                     <tr>
@@ -24,19 +25,19 @@
                     </tr>
                     %end
                 </tbody></table>
+                <input type="submit" name="nubex" value=" GO!" />
+            </form>
 
             <form action = '/variant1_2'><p> </p>
-                <input type="submit" name="nubex" value=" Increase the size of the matrix" />
+                <input onclick = '/variant1_4' type="submit"  name="nubex" value=" Increase the size of the matrix" />
             </form>
 
             <form action = '/variant1_3'><p> </p>
                 <p> </p>
                 <input type="submit" name="nubex" value=" Reduce the size of the matrix" />
+                <label for="">Dimension of the matrix: {{size}} X {{size}} </label> 
             </form>
 
-            <form>
-                <label for="">Dimension of the matrix: {{size}} X {{size}} </label>                 
-            </form>
             
             </div>
         
