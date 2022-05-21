@@ -81,6 +81,7 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
+    <Content Include="views\kruskalRez.tpl" />
     <Content Include="views\variant1.tpl" />
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />

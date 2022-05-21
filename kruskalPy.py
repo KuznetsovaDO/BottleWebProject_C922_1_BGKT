@@ -1,8 +1,9 @@
-from bottle import route, view, request
+from bottle import route, view, request, template
 from array import *
-import routes
+import jinja2
+from datetime import datetime
 
-@route('/kruskal', method='post') 
+@route('/kruskalRez', method='post')
 def kruskal_yu():
     # получение данных с формы
     weight_ = request.forms.getall('ribWeight')
@@ -10,22 +11,32 @@ def kruskal_yu():
     final_ = request.forms.getall('finalVertex')
     size_ = len(weight_)
     vert_ = request.forms.get('el1', type=int)
+    errors = ""
     # проверка на связанность графа
     if not(str(vert_) in start_):
         if not(str(vert_) in final_):
-            return "graf ne svyazan"
-    else:
-        for i in range(size_):
-            if (start_[i] == final_[i]):
-                return "vvedite znachenya bez petel'"
+            errors = "graf ne svyazan"
+    # проверка на наличие петель в графе
+    for i in range(size_):
+        if (int(start_[i]) == int(final_[i])):
+            errors = "vvedite znachenya bez petel'"
+    # проверка на наличие повторяющихся ребер
+    for i in range(size_):
+        for j in range(size_):
+            duo11 = start_[i] + final_[i]
+            duo12 =  final_[i] + start_[i]
+            duo21 = start_[j] + final_[j]
+            duo22 =  final_[j] + start_[j]
+            if i != j:
+                if duo11 == duo21 or duo11 == duo22 or duo12 == duo21 or duo12 == duo22:
+                    errors = "povtor"
     R = [[]]
-    t =""
     # заполнение массива
     for i in range(size_):
         R.insert(i, [int(weight_[i]), int(start_[i]), int(final_[i])])
     del(R[size_])
-
     Rs = sorted(R, key=lambda x: x[0], reverse=False) # сортировка массива по возрастанию веса
+    
     U = set()   # список соединенных вершин
     D = {}      # словарь списка изолированных групп вершин
     T = []      # список ребер остова
@@ -53,18 +64,15 @@ def kruskal_yu():
             gr1 = D[r[1]]
             D[r[1]] += D[r[2]]      # объединем списки двух групп вершин
             D[r[2]] += gr1
-
-    for i in R:
-        for x in i:
-            t += "[" + str(x) + "], "
-        t += "||"
-    t += "<=======>"
-    for i in T:
-        for x in i:
-            t += "[" + str(x) + "], "
-        t += "||"
-    t += str(vert_)
-    return t
+    return template('kruskalRez',
+            title='Kruskal',
+            year=datetime.now().year,
+            T=T,
+            R=R,
+            U=U,
+            Rs=Rs,
+            D=D,
+            errors = errors)
 
 
 

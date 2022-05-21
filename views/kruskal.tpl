@@ -14,7 +14,7 @@
 			<p><input type="submit" value="Create"></p>
 		</form>
 		<!-- форма дл€ ввода значений (начальной вершины, конечной вершины и веса ребра между ними) -->
-		<form method="post" action="/kruskal" enctype="text">
+		<form method="post" action="/kruskalRez" enctype="text">
 		<!-- цикл дл€ создани€ необходимого количества полей ввода -->
 			%for i in range(sizeEdges):
 				<input type="number" name="startingVertex" size="3" value = "0" min = "1" max = "{{sizeVertic}}" required>
