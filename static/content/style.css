@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    font-family: Montserrat; /* ׁולויסעגמ רנטפעמג */
+    font-family: Montserrat; 
     font-weight: bold;
     font-size: 25pt;
 }
@@ -14,14 +14,24 @@ h1 {
 label {
     font-family: Montserrat;
     font-weight: normal;
-    
+}
+
+p {
+    font-family: Montserrat;
+    font-weight: normal;
 }
 .hh2 {
     font-family: Montserrat;
     font-weight: normal;
     white-space: pre-wrap;
-    
+    text-decoration: none;
+   
 }
+
+.hh2:hover, .hh2:focus {
+    text-decoration: none
+}
+
 
 div {
     justify-content: center;
@@ -35,6 +45,7 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+
 .button {
     border-radius: 12px;
     background: wight;
@@ -56,7 +67,7 @@ input[type=submit] {
     background-color: #4CAF50;
 }
 
-input[type=number] {
+input.cell[type=number] {
     padding: 5px;
     border: 2px solid #ccc;
     -webkit-border-radius: 5px;
@@ -95,6 +106,7 @@ input[type=number] {
 
     .bott:hover, a.bott:focus {
         -webkit-animation: linear 1.2s light infinite;
+        text-decoration: none;
         -moz-animation: linear 1.2s light infinite;
         -o-animation: linear 1.2s light infinite;
         animation: linear 1.2s light infinite;
@@ -171,6 +183,7 @@ input[type=number] {
 .bott:active {
     color: #fff;
     text-shadow: 0px -1px 0px #444,0px 0px 5px #ffd,0px 0px 8px #fff;
+    text-decoration: none;
     box-shadow: 0px 1px 0px #666,0px 2px 0px #444,0px 2px 2px rgba(0, 0, 0, .9);
     -webkit-transform: translateY(3px);
     -moz-transform: translateY(3px);

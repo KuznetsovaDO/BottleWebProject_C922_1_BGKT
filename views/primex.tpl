@@ -20,6 +20,8 @@
 		<p class="hh2">3) We are looking in line 4 versh. with min value (versh. 1 is the value of 4). Connect 4 and 1</p>
 		<p class="hh2">4) In the lines of the fragment (1 and 4), we are looking for the min number (versh. 3 is the value of 5). Soed. 1 and 3</p>
 		<p class="hh2">5) Repeat item 4 for the received fragment</p>
+		<br></br>
+		<a class="bott" href="/variant4">Back</a>
 
 
 
