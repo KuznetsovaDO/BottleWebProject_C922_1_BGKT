@@ -183,3 +183,12 @@ def primex():
         title='Title',
          year=datetime.now().year
     )
+
+@route('/about')
+@view('about')
+def about():
+    """Renders the about page."""
+    return dict(
+        title='Title',
+         year=datetime.now().year
+    )

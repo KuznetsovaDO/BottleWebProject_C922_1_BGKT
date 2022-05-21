@@ -24,7 +24,7 @@ It is convenient to represent the graph as a matrix of connections.</p>
     <br \><br \>
      <p class="hhh" align = center>Enter the number of vertices:</p>
       <style>
-       select{width: 145px;}
+       select{width: 110px;}
       </style>
      <p align=center>
          <select name = "GetValue">
