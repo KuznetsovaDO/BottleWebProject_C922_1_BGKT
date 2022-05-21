@@ -167,7 +167,7 @@ def kruskal():
 def variant4():
     return dict(
         title='The Prim`s algorithm',
-        title_enter = 'Let`go',
+        title_enter = 'Let`s go',
         title_main='nothing.',
         text_main='nothing.',
         title_size='The Prim algorithm is a minimal spanning tree algorithm that takes a graph as input and finds a subset of the edges of this graph that forms a tree that includes each vertex, and also has the minimum sum of weights among all trees that can be formed from the graph.',

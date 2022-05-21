@@ -11,9 +11,6 @@
  <p class="hh2">The Prim`s algorithm answer:</p>
  {{ lol }}
  
- 
 </div>
-
-
 </html>
 
