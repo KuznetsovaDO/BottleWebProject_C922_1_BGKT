@@ -24,41 +24,47 @@ def variant2():
     message='Your application description page.',
     year=datetime.now().year, 
     size = 4,
-    check = 'false',
-    description = "Depth-first search (DFS) is a recursive algorithm for traversing a tree or graph, starting at the root vertex (in the case of a graph, an arbitrary vertex can be selected) and recursively traversing the entire graph, visiting each vertex exactly once."
+    check = 'false'
     )
 
 @route('/dfs')
 @view('variant2')
-def new():
+def dfs():
+    # проверяем, какая кнопка была нажата
     if request.GET.get('Button')=="Create":
+        # получаем значение с поля ввода и записываем его в cookie
         size_ = request.GET.get('SIZE')
         response.set_cookie("size", size_)
+
         return dict(
         title='Title',
         message='Your application description page.',
         year=datetime.now().year,
         size = int(size_),
         check = 'false',
-        description = "Depth-first search (DFS) is a recursive algorithm for traversing a tree or graph, starting at the root vertex (in the case of a graph, an arbitrary vertex can be selected) and recursively traversing the entire graph, visiting each vertex exactly once."
-    )
-    elif request.GET.get('Button')=="Send":
-        size = int(request.cookies.size)
 
+        )
+
+    if request.GET.get('Button')=="Send":
+        # берем из куки размер матрицы
+        size = int(request.cookies.size)
+        
         matrix = []
+
+        # заполняем матрицу нулями
         for i in range(size):
             row = []
             for j in range(size):
                 row.append(0)
             matrix.append(row)
 
-        # Cчитывание матрицы
+        # считываем введенную матрицу
         for i in range(size):
             for j in range(size):
                 if (str(request.GET.get(str(i)+'_'+str(j)))=='1'):
                     matrix[i][j]=1
                     matrix[j][i]=1
-
+        # преобразуем в словарь смежных вершин
         inc = {}
         for i in range(size):
             row=[]
@@ -66,6 +72,8 @@ def new():
                 if (matrix[i][j] == 1):
                     row.append(j)
             inc[i]=row
+        
+        # находим остовное дерево
         result = depth_first_search.DFS(inc)
 
         return dict(

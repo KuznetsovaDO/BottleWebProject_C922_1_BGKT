@@ -9,95 +9,84 @@
             
     </head>
 
-    <body>
+    <body class="var2">
     <form action="/dfs" method = "GET">
         <!-- Заголовок (название метода) -->
         <h1 align = center>Depth-first search algorithm</h1>
         <!-- Описание метода -->
-    <div style="width: inherit">
-   <div style=" margin: 5% ; width: 45%; float:left;">
-        <label>{{description}}</label> 
-   </div>
-   <div style="width: 40%; float:right;">
-        <img style=" margin:5% 0; width: 100%" align="middle|right" src="/static/images/graph-in-depth.gif">
-   </div>
-   <br style="clear:both;"/>
-</div>
+        <div style="width: inherit">
+            <div style=" margin: 5% ; width: 45%; float:left;">
+                <!--Текст описания-->
+                <label>"Depth-first search (DFS) is a recursive algorithm for traversing a tree or graph, starting at the root vertex (in the case of a graph, an arbitrary vertex can be selected) 
+                and recursively traversing the entire graph, visiting each vertex exactly once."</label> 
+            </div>
+            <div style="width: 40%; float:right;">
+                <!-- Анимация обхода -->
+                <img style=" margin:5% 0; width: 100%" align="middle|right" src="/static/images/graph-in-depth.gif">
+            </div>
+            <br style="clear:both;"/>
+        </div>
 
-
-<div>
-        
-        
-        
         <!-- Форма для ввода размера матрицы -->
         <div style="margin: 5%" >
-            <p align="center" class="hh2" style = "font-weight: bold;">Enter matrix size:</p>
+            <p align="center" class="step_title">Enter matrix size:</p>
 
             <!-- Поле для ввода -->
             <div align = "center">
-                <input type="number" placeholder="size" name = "SIZE" value={{size}} min = "1" border="5">
+                <input class="matrix_size" type="number" placeholder="size" name = "SIZE" value="{{size}}" min = "1" border="5">
             </div>
 
             <!-- Кнопка "Создать матрицу" -->
             <div>
                 <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
             </div>
-        </div
-    
-        <!-- Надпись "Введите матрицу" -->
-        <p align="center" class="hh2" style = "font-weight: bold;">Enter the matrix:</p>
-
+        </div>
+     
         <!-- Таблица для вводы матрицы -->
-
-            <table align="center"><tbody>
+        <table align="center">
+            <p align="center" class="step_title">Enter the matrix:</p>
+            <tbody>
                 <!-- Цикл для создания строк матрицы -->
                 %for i in range(size):
                     <tr>
                         <!-- Цикл для создания столбцов матрицы -->
                         %for j in range(size):
-                            <!-- Проверка, нужно ли выводить раннее введенную матрицу-->
+                            <!-- Проверка, вводил ли пользователь матрицу-->
                             %if (check =='true'):
-                                %if (j>i):
-                                    <!-- Выше диагонали ячейки доступны для ввода -->
-                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}}></td>
+                                <!-- Ниже диагонали ячейки для ввода недоступны для симметричности-->
+                                %if (i>=j):
+                                    %disabled="disabled"
                                 %else:
-                                    <!-- Ниже диагонали ячейки для ввода недоступны -->
-                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}} disabled></td>
+                                    %disabled=""
                                 %end
+                                <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"   name="{{i}}_{{j}}" value = {{matrix[i][j]}} {{disabled}}></td>
                             %else:
-                                %if (j>i):
-                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
+                                %if (i>=j):
+                                    %disabled="disabled"
                                 %else:
-                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" disabled></td>
+                                    %disabled=""
                                 %end
+                                <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"   name="{{i}}_{{j}}" {{disabled}}></td>
                             %end
                         %end
                     </tr>
                 %end
-            </table></tbody>
+        </table></tbody>
+        <!-- Кнопка -->
+        <button style="margin: 10px" class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
+    </form> 
 
-                <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
-        </div>
-        </div>
- 
-       </form> 
-
-        % if (check == 'true'):
-            <section>
-                <h2 style="padding: 15px;">Result</h2>
-                    <div style="padding: 15px;" >
-                    <table><tbody>
-                        %for i in range(size):
-                        <tr>
-                            %for j in range(size):
-                            <td><input type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = "{{result[i][j]}}" readonly></td>
-                            %end
-                        </tr>
-                        %end
-                    </tbody></table>
-                    </div>
-            </section>
-
-    
+    <!-- Вывод матрицы остовного дерева -->
+    % if (check == 'true'):
+        <p align="center" class="step_title">Result:</p>
+        <table align="center"><tbody>
+            %for i in range(size):
+                <tr>
+                %for j in range(size):
+                    <td><input class="cell" type="number" min="0" max="1" name="{{i}}_{{j}}" value = "{{result[i][j]}}" readonly></td>
+                %end
+                </tr>
+            %end
+        </tbody></table>
     </body
 </div>
