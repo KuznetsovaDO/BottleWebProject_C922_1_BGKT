@@ -1,6 +1,5 @@
 from bottle import route, view, request, template
 from array import *
-import jinja2
 from datetime import datetime
 
 @route('/kruskalRez', method='post')
@@ -61,7 +60,7 @@ def kruskal_yu():
     for r in Rs:    # проходим по ребрам второй раз и объединяем разрозненные группы вершин
         if r[2] not in D[r[1]]:     # если вершины принадлежат разным группам, то объединяем
             T.append(r)             # добавляем ребро в остов
-            gr1 = D[r[1]]
+            gr1 = D[r[1]]           # сохраняем значение до объединения
             D[r[1]] += D[r[2]]      # объединем списки двух групп вершин
             D[r[2]] += gr1
     return template('kruskalRez',
