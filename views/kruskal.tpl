@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 	% rebase('layout.tpl', title=title, year=year, sizeEdges=sizeEdges, sizeVertic=sizeVertic)
 	<link href="/static/content/style.css" rel="stylesheet">
-	<style>
-	.border {
-		border: 3px solid #181D31;
-	}
-  </style>
+	
 	<div class="jumbotron">
 	<body>
 	<!-- заголовок и описание алгоритма -->
