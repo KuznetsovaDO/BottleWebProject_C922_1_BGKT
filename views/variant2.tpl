@@ -15,11 +15,11 @@
         <h1 align = center>Depth-first search algorithm</h1>
         <!-- Описание метода -->
     <div style="width: inherit">
-   <div style=" margin: 5% 1% 0 7%; width: 40%; float:left;">
-        <p>{{description}}</p> 
+   <div style=" margin: 5% ; width: 45%; float:left;">
+        <label>{{description}}</label> 
    </div>
    <div style="width: 40%; float:right;">
-        <img style="width: 100%" align="middle|right" src="/static/images/graph-in-depth.gif">
+        <img style=" margin:5% 0; width: 100%" align="middle|right" src="/static/images/graph-in-depth.gif">
    </div>
    <br style="clear:both;"/>
 </div>
@@ -35,7 +35,7 @@
 
             <!-- Поле для ввода -->
             <div align = "center">
-                <input type="number" placeholder="size" name = "SIZE" value={{size}} min = "1" max = "10" border="5">
+                <input type="number" placeholder="size" name = "SIZE" value={{size}} min = "1" border="5">
             </div>
 
             <!-- Кнопка "Создать матрицу" -->
@@ -59,16 +59,16 @@
                             %if (check =='true'):
                                 %if (j>i):
                                     <!-- Выше диагонали ячейки доступны для ввода -->
-                                    <td><input type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}}></td>
+                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}}></td>
                                 %else:
                                     <!-- Ниже диагонали ячейки для ввода недоступны -->
-                                    <td><input type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}} disabled></td>
+                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" value = {{matrix[i][j]}} disabled></td>
                                 %end
                             %else:
                                 %if (j>i):
-                                    <td><input type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
+                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
                                 %else:
-                                    <td><input type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" disabled></td>
+                                    <td><input class = "cell" type="number" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" disabled></td>
                                 %end
                             %end
                         %end

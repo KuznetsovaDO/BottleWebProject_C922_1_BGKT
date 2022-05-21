@@ -17,7 +17,6 @@ label {
 }
 
 p {
-    line-height: 2;
     font-family: Montserrat;
     font-weight: normal;
 }
@@ -68,7 +67,7 @@ input[type=submit] {
     background-color: #4CAF50;
 }
 
-input[type=number] {
+input.cell[type=number] {
     padding: 5px;
     border: 2px solid #ccc;
     -webkit-border-radius: 5px;
