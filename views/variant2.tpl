@@ -41,10 +41,9 @@
                 <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
             </div>
         </div>
-
-        <p>{{error}}</p>
      
         <!-- Таблица для вводы матрицы -->
+        <div><p class="error">{{error}}</p>
         <table align="center">
             <p align="center" class="step_title">Enter the matrix:</p>
             <tbody>
@@ -73,7 +72,7 @@
                         %end
                     </tr>
                 %end
-        </table></tbody>
+        </table></tbody></div>
         <!-- Кнопка -->
         <button style="margin: 10px" class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
     </form> 

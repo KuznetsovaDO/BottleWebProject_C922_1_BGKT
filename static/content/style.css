@@ -81,11 +81,18 @@ input.cell[type=number] {
     min-height: 3.0em;
     text-align: center
 }
+/*Поле для ввода размера матрицы*/
 input.matrix_size[type=number] {
     padding: 5px;
     border: 2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 5px
+}
+
+/*Вывод сообщения об ошибке*/
+.error {
+    text-align: center;
+    color: red;
 }
 
 .bott {

@@ -43,12 +43,13 @@ def dfs():
                     matrix[i][j]=1
                     matrix[j][i]=1
                     count+=1
-        if count >= size:
+        # проверка на связность графа
+        if count < size-1:
             return dict(
             title='Title',
             message='Your application description page.',
             year=datetime.now().year,
-            size = int(size_),
+            size = int(size),
             check = 'false',
             error = "Please enter a connected graph"
             )
