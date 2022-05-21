@@ -6,7 +6,7 @@ class Test_test_3(unittest.TestCase):
     def test_A(self):
         n= 4
         o=[]
-        W = [[0, 6, 4, 0],
+        W = [[0, 6, 3, 0],
              [6, 0, 4, 8],
              [5, 4, 0, 0],
              [0, 8, 0, 0]]
@@ -14,8 +14,8 @@ class Test_test_3(unittest.TestCase):
         city_labels = None
         road_length = 0
         starting_vertex = 0
-        b = 16
-        v=[4,4,8]
+        b = 15
+        v=[3,4,8]
         _ = float('inf')
 
         for weights in W:
