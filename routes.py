@@ -181,6 +181,14 @@ def variant4():
         title_size='The Prim algorithm is a minimal spanning tree algorithm that takes a graph as input and finds a subset of the edges of this graph that forms a tree that includes each vertex, and also has the minimum sum of weights among all trees that can be formed from the graph.',
         year=datetime.now().year
     )
+
+@route('/kruskalRez')
+@view('/kruskalRez')
+def home():
+    return dict(
+            title='Kruskal',
+            year=datetime.now().year
+    )
     
 
 @route('/primex')
