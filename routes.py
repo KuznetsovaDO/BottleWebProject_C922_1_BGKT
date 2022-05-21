@@ -175,3 +175,11 @@ def variant4():
     )
     
 
+@route('/primex')
+@view('primex')
+def primex():
+    """Renders the about page."""
+    return dict(
+        title='Title',
+         year=datetime.now().year
+    )

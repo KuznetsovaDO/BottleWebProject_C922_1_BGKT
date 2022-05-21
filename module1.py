@@ -1,11 +1,13 @@
 import random
 from string import ascii_uppercase
 from bottle import post, request
+from bottle import template
 import re
 import numpy as np
 import Prima1
+from datetime import datetime
 
-@post('/variant4', method='post')
+@post('/primansw', method='post')
 def Start():
     n = int (request.forms.get('GetValue'))
     M = np.random.randint(0,2,(n,n))
@@ -22,5 +24,5 @@ def Start():
             f += str(W[i][j]) + " "
         f += "<br>"
     print (f)
-    return ("Matrix: "+"<br>"+f+"<br>"+Prima1.prima(W))
-
+    lol = ("Matrix: "+"<br>"+f+"<br>"+Prima1.prima(W))
+    return template ('primansw', title='The Prim`s algorithm', year = datetime.now().year, lol = lol)
