@@ -100,6 +100,7 @@
     </table></p>
     % end
     </form>
+    <br \><br \>
     <form action="/kruskal">
    <p class="hhh"><input type="submit" value="Back"></p>
 </body>
