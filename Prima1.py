@@ -29,7 +29,7 @@ def prima(W,city_labels = None):
     tied = [starting_vertex]
     free_vertexes.remove(starting_vertex)
 
-    x='Starting with %s' % city_labels[starting_vertex]+"<br>"
+    x='Starting with %s' % city_labels[starting_vertex]+"\n"
 
     road_length = 0
 
@@ -63,10 +63,10 @@ def prima(W,city_labels = None):
             path_length = W[min_link[0]][min_link[1]]
         except TypeError:
             print("Error. Try again")
-            z+="There are no ways"+"<br>"
+            z+="There are no ways"+"\n"
             break
         
-        z+='Connection %s in %s [%s]' % (city_labels[min_link[0]], city_labels[min_link[1]], str(path_length))+"<br>"
+        z+='Connection %s in %s [%s]' % (city_labels[min_link[0]], city_labels[min_link[1]], str(path_length))+"\n"
 
         road_length += path_length
         free_vertexes.remove(min_link[1])

@@ -22,8 +22,8 @@ def Start():
     for i in range (n):
         for j in range (n):
             f += str(W[i][j]) + " " 
-        f += "<br>"
+        f += "\n"
     print (f)
 
-    lol = ("Matrix: "+" <br> " +f+ "<br>" +Prima1.prima(W))
-    return template ('primansw', title='The Prim`s algorithm', year = datetime.now().year, lol = lol) + ("Matrix: "+"<br>"+f+"<br>"+Prima1.prima(W))
+    ans = ("Matrix: " + "\n"+ f + "\n" + Prima1.prima(W))
+    return template ('primansw', title='The Prim`s algorithm', year = datetime.now().year, ans = ans)

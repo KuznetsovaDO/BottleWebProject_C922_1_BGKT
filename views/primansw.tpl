@@ -8,9 +8,8 @@
 </head>
 
 <div class="jumbotron">
- <p class="hh2">The Prim`s algorithm answer:</p>
- {{ lol }}
- 
+ <p class="hhh">The Prim`s algorithm answer:</p>
+ <p class="hh2">{{ ans }}</p>
 </div>
 </html>
 
