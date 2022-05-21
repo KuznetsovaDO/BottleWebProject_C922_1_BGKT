@@ -28,8 +28,9 @@
         </div>
 
         <!-- Форма для ввода размера матрицы -->
-        <div style="margin: 5%" >
-            <p align="center" class="step_title">Enter matrix size:</p>
+        <div style="width: inherit">
+            <div style=" margin: 5% ; width: 40%; float:left;">
+            <p align="center" class="step_title">Matrix size:</p>
 
             <!-- Поле для ввода -->
             <div align = "center">
@@ -40,10 +41,22 @@
             <div>
                 <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
             </div>
+            </div>
+
+            <div style="margin: 5% ; width: 40%; float:right;">
+                <p align="center" class="step_title">Starting vertex</p>
+                <div align = "center">
+                    <input class="matrix_size" type="number" placeholder="vertex" name = "START" value="{{start}}" min = "1">
+                </div>
+            </div>
+            <br style="clear:both;"/>
+
         </div>
-     
+
+        <!-- Для вывода сообщения об ошибке -->
+        <p class="error">{{error}}</p>
+
         <!-- Таблица для вводы матрицы -->
-        <div><p class="error">{{error}}</p>
         <table align="center">
             <p align="center" class="step_title">Enter the matrix:</p>
             <tbody>
@@ -72,7 +85,7 @@
                         %end
                     </tr>
                 %end
-        </table></tbody></div>
+        </table></tbody>
         <!-- Кнопка -->
         <button style="margin: 10px" class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
     </form> 

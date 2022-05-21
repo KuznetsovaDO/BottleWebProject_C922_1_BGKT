@@ -1,4 +1,4 @@
-def DFS(inc):
+def DFS(inc, start):
 
     visited = set()  # Посещена ли вершина?
 

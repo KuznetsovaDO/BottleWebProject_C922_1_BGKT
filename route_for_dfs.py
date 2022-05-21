@@ -19,12 +19,14 @@ def dfs():
         year=datetime.now().year,
         size = int(size_),
         check = 'false',
-        error = error
+        error = error,
+        start=1
         )
 
     if request.GET.get('Button')=="Send":
         # берем из куки размер матрицы
         size = int(request.cookies.size)
+        start = request.GET.get('START')
         
         matrix = [] #матрица
         count = 0 #количество ребер
@@ -64,7 +66,7 @@ def dfs():
             inc[i]=row
         
         # находим остовное дерево
-        result = depth_first_search.DFS(inc)
+        result = depth_first_search.DFS(inc, start)
 
         return dict(
             title='Title',
@@ -74,5 +76,6 @@ def dfs():
             check = 'true',
             result = result, 
             matrix = matrix,
-            error = error
+            error = error, 
+            start = start
         )
