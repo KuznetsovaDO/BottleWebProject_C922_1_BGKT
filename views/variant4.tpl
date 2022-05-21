@@ -19,10 +19,10 @@
      <p class="hh2">3. Repeat step 2 until there are vertices that do not belong to the fragment.
 It is convenient to represent the graph as a matrix of connections.</p>
      <a href="/primex" 
-        <p class="h22">Example</p>
+        <p class="hh2">Example</p>
      </a>
     <br \><br \>
-     <p class="hhh" align = center>Enter the number of vertices:</p>
+     <p class="hhh">Enter the number of vertices:</p>
       <style>
        select{width: 110px;}
       </style>
