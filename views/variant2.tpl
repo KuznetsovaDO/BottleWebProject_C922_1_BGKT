@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 % rebase('layout.tpl', title=title, year=year)
 
     <head>
