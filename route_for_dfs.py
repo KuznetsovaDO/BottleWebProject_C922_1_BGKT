@@ -13,7 +13,6 @@ def dfs():
         size_ = request.GET.get('SIZE')
         response.set_cookie("size", size_)
 
-        #выводим матрицу с необходимым размером
         return dict(
         title='Title',
         message='Your application description page.',
