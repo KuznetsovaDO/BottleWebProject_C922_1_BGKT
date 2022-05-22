@@ -1,4 +1,4 @@
-#!C:\Users\ewgen\Desktop\fromgit2\env4\Scripts\python.exe
+#!C:\Users\diana\Source\Repos\group1_practiс\env4\Scripts\python.exe
 # -*- coding: utf-8 -*-
 """
 Bottle is a fast and simple micro-framework for small web applications. It
