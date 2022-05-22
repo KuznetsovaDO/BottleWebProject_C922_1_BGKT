@@ -13,9 +13,10 @@ def kruskal_yu():
     errors = []
     er = 0
     
-    # проверка на связанность графа
-    if not(str(vert_) in start_):
-        if not(str(vert_) in final_):
+    # проверка на наличие несвязанных вершин в графе
+    for i in range(vert_):
+        i += 1
+        if not(str(i) in start_) and not(str(i) in final_):
             errors.insert(er, "ne svyazan")
             er += 1
     # проверка на наличие петель в графе
@@ -88,6 +89,13 @@ def kruskal_yu():
             proc = "Consider vertices " + str(r[1]) + " and " + str(r[2]) + " connected by an edge. These vertices belong to different isolated groups, therefore this edge will be part of the spanning tree. "
             process.insert(p, proc)
             p += 1
+    # проверка на связанность изолированных групп графа
+    for r in T:
+        for i in range(vert_):
+            i += 1
+            if i not in D[r[1]]:
+                errors.insert(er, "ne svyazan")
+                er += 1
     return template('kruskalRez',
             title='Kruskal',
             year=datetime.now().year,
