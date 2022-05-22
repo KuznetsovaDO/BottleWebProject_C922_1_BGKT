@@ -1,6 +1,6 @@
-from bottle import route, view, request, response
+from bottle import route, view, request, response, template
 from datetime import datetime
-import depth_first_search
+import breadth_first_search as bfs
 
 @route('/variant1_2')
 @view('variant1')
@@ -31,8 +31,7 @@ def variant4():
 @route('/variant1_4', method = "GET")
 @view('variant1')
 def variant4():
-    """Renders the about page."""
-    #CЧИТЫВАНИЕ МАТРИЦЫ В СЛОВАРЬ
+    #CЧИТЫВАНИЕ МАТРИЦЫ В МАССИВ
     #получаем размер матрицы
     size = int(request.cookies.size)
     #создаем пустой массив
@@ -47,11 +46,14 @@ def variant4():
             row.append(int(request.GET.get(str(i)+'_'+str(j))))
         #добавляем строку в двумерный массив
         adj_matrix.append(row)
+    result = bfs.shirina(adj_matrix,3)
     
     
-    return dict(
-        title='Title',
-        message='Your application description page.',
-        year=datetime.now().year,
-        size = size - 1
-    )
+    return template("result_bfs", size = size,matrix1 = adj_matrix, matrix2 = result[1], path = result[0])
+
+@route('result_bfs')
+@view('result_bfs')
+def result():
+    return dict (
+        size = int(request.cookies.size)
+        )
