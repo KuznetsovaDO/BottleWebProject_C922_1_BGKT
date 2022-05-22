@@ -21,10 +21,11 @@ def DFS(inc, start):
                 result_matrix[i][v]=1
                 dfs(i)
 
-    start = 1
     dfs(start)  # start - начальная вершина обхода
+
+    for i in range(len(visited)):
+        visited[i]+=1
 
     result = {"matrix": result_matrix, "sequence": visited}
 
     return result
-
