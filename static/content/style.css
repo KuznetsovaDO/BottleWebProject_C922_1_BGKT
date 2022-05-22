@@ -216,3 +216,16 @@ input.matrix_size[type=number] {
     animation: none;
 }
 
+.jum {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #a1a1a1;
+    text-align: center;
+    position: center;
+    border-radius: 6px;
+}
+
