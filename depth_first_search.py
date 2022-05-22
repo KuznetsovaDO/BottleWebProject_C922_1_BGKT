@@ -1,6 +1,6 @@
 def DFS(inc, start):
 
-    visited = set()  # Посещена ли вершина?
+    visited = []  # Посещена ли вершина?
 
     a = len(inc) 
     result_matrix = []
@@ -14,7 +14,7 @@ def DFS(inc, start):
     def dfs(v):
         if v in visited:  # Если вершина уже посещена, выходим
             return
-        visited.add(v)  # Посетили вершину v
+        visited.append(v)  # Посетили вершину v
         for i in inc[v]:  # Все смежные с v вершины
             if not i in visited:
                 result_matrix[v][i]=1
@@ -24,5 +24,7 @@ def DFS(inc, start):
     start = 1
     dfs(start)  # start - начальная вершина обхода
 
-    return(result_matrix)
+    result = {"matrix": result_matrix, "sequence": visited}
+
+    return result
 
