@@ -82,6 +82,7 @@
 
     %end
     % end
+    <br \><br \>
     <!-- вывод итогового ответа -->
     <p class="hhh">The result of the search for the minimum spanning tree by the Kruskal method: </p>
 <p><table align = center cellspacing="3" border="1" cellpadding="5">
@@ -100,7 +101,7 @@
     </table></p>
     % end
     </form>
-    <br \><br \>
+    <br \>
     <form action="/kruskal">
    <p class="hhh"><input type="submit" value="Back"></p>
 </body>
