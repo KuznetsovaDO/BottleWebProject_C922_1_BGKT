@@ -103,7 +103,7 @@
     </form>
     <br \>
     <form action="/kruskal">
-   <p class="hhh"><input type="submit" value="Back"></p>
+   <p><button style="margin: 10px 0px 5%" class="button button1 hhh" type="submit">Back</button></p>
 </body>
 </div>
 </html>
