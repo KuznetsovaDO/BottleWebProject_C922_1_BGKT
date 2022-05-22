@@ -22,7 +22,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/variant1">Variant 1</a></li>
+                    <li><a href="/variant1">Breadth-first search</a></li>
                     <li><a href="/variant2">Depth-first search</a></li>
                     <li><a href="/kruskal">Kruskal's algorithm</a></li>
                     <li><a href="/variant4">The Prim`s algorithm</a></li>

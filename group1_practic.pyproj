@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
-    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -127,14 +127,14 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
-    <Interpreter Include="env3\">
-      <Id>env3</Id>
-      <Version>3.8</Version>
-      <Description>env3 (Python 3.8 (32-bit))</Description>
+    <Interpreter Include="env4\">
+      <Id>env4</Id>
+      <Version>3.9</Version>
+      <Description>env4 (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X86</Architecture>
+      <Architecture>X64</Architecture>
     </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
