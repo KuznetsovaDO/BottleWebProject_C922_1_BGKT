@@ -18,7 +18,7 @@
      <p class="hh2">2. The vertex closest to the fragment is selected (that is, the minimum distance from any vertex included in the fragment to any one not yet included in it). This vertex is added to the fragment.</p>
      <p class="hh2">3. Repeat step 2 until there are vertices that do not belong to the fragment.
 It is convenient to represent the graph as a matrix of connections.</p>
-     <a href="/primex" 
+     <a href="/primex" style="text-decoration: none;">
         <p class="hh2">Example</p>
      </a>
     <br \><br \>

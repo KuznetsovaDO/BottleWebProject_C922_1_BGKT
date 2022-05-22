@@ -9,6 +9,7 @@ h1 {
     font-family: Montserrat; /* ׁולויסעגמ רנטפעמג */
     font-weight: bold;
     font-size: 22pt;
+    text-decoration: none;
 }
 
 label {
@@ -223,7 +224,7 @@ input.matrix_size[type=number] {
     font-weight: 200;
     line-height: 2.1428571435;
     color: inherit;
-    background-color: #a1a1a1;
+    background-color: #b0b7c6;
     text-align: center;
     position: center;
     border-radius: 6px;
