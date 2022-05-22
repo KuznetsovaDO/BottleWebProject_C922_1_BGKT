@@ -4,10 +4,10 @@ from string import ascii_uppercase
 
 def prima(W,city_labels = None):
    
-    x=""
-    z=""
+    a=""
     b=""
-    o=""
+    c=""
+    ans=""
     _ = float('inf')
     cities_count = len(W)
 
@@ -29,7 +29,7 @@ def prima(W,city_labels = None):
     tied = [starting_vertex]
     free_vertexes.remove(starting_vertex)
 
-    x='Starting with %s' % city_labels[starting_vertex]+"\n"
+    a='Starting with %s' % city_labels[starting_vertex]+"\n"
 
     road_length = 0
 
@@ -63,16 +63,16 @@ def prima(W,city_labels = None):
             path_length = W[min_link[0]][min_link[1]]
         except TypeError:
             print("Error. Try again")
-            z+="There are no ways"+"\n"
+            b+="There are no ways"+"\n"
             break
         
-        z+='Connection %s in %s [%s]' % (city_labels[min_link[0]], city_labels[min_link[1]], str(path_length))+"\n"
+        b+='Connection %s in %s [%s]' % (city_labels[min_link[0]], city_labels[min_link[1]], str(path_length))+"\n"
 
         road_length += path_length
         free_vertexes.remove(min_link[1])
         tied.append(min_link[1])
 
-    b='All the way: %s' % str (road_length)
-    o=x+z+b
-    return o
+    c ='All the way: %s' % str (road_length)
+    ans=a+b+c
+    return ans
     
