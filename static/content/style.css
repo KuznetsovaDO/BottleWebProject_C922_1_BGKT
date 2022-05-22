@@ -16,9 +16,10 @@ label {
     font-weight: normal;
 }
 
-p {
+
+p.step_title {
     font-family: Montserrat;
-    font-weight: normal;
+    font-weight: bold;
 }
 .hh2 {
     font-family: Montserrat;
@@ -67,11 +68,31 @@ input[type=submit] {
     background-color: #4CAF50;
 }
 
+/*Для полей ввода матрицы*/
 input.cell[type=number] {
     padding: 5px;
     border: 2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    min-width: 1.0em;
+    max-width: 3.0em;
+    min-height: 3.0em;
+    text-align: center
+}
+/*Поле для ввода размера матрицы*/
+input.matrix_size[type=number] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+
+/*Вывод сообщения об ошибке*/
+.error {
+    text-align: center;
+    color: red;
 }
 
 .bott {
