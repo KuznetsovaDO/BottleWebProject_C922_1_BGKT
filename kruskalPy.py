@@ -1,6 +1,7 @@
 from bottle import route, view, request, template
 from array import *
 from datetime import datetime
+import json
 
 def isLoop(start_, final_):
     size_ = len(final_)
@@ -27,6 +28,8 @@ def kruskal_yu():
     errors = []
     er = 0
     
+    
+
     # проверка на наличие несвязанных вершин в графе
     if isConnectV(start_, final_, vert_):
         errors.insert(er, "ne svyazan")
@@ -52,7 +55,9 @@ def kruskal_yu():
         R.insert(i, [int(weight_[i]), int(start_[i]), int(final_[i])])
     del(R[size_])
     Rs = sorted(R, key=lambda x: x[0], reverse=False) # сортировка массива по возрастанию веса
+
     
+
     U = set()   # список соединенных вершин
     D = {}      # словарь списка изолированных групп вершин
     T = []      # список ребер остова
@@ -107,6 +112,12 @@ def kruskal_yu():
             if i not in D[r[1]]:
                 errors.insert(er, "ne svyazan")
                 er += 1
+
+    if er == 0:
+        jsonIn = "Time " + str(datetime.now()) + "; Input " + str(R) + "; Output " + str(T)
+        with open('inData.json', 'a') as file:
+            json.dump(jsonIn, file)
+            file.write('\n')
     return template('kruskalRez',
             title='Kruskal',
             year=datetime.now().year,
