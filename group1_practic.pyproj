@@ -19,7 +19,9 @@
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
     <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
-    <TestFramework>Pytest</TestFramework>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +49,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="test_kruskal2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_kruskal1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_Prima1.py">
       <SubType>Code</SubType>
     </Compile>

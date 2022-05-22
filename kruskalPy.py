@@ -2,6 +2,20 @@ from bottle import route, view, request, template
 from array import *
 from datetime import datetime
 
+def isLoop(start_, final_):
+    size_ = len(final_)
+    for i in range(size_):
+        if (int(start_[i]) == int(final_[i])):
+            return True
+    return False
+
+def isConnectV(start_, final_, vert_):
+    for i in range(vert_):
+        i += 1
+        if not(str(i) in start_) and not(str(i) in final_):
+            return True
+    return False
+
 @route('/kruskalRez', method='post')
 def kruskal_yu():
     # получение данных с формы
@@ -14,16 +28,13 @@ def kruskal_yu():
     er = 0
     
     # проверка на наличие несвязанных вершин в графе
-    for i in range(vert_):
-        i += 1
-        if not(str(i) in start_) and not(str(i) in final_):
-            errors.insert(er, "ne svyazan")
-            er += 1
+    if isConnectV(start_, final_, vert_):
+        errors.insert(er, "ne svyazan")
+        er += 1
     # проверка на наличие петель в графе
-    for i in range(size_):
-        if (int(start_[i]) == int(final_[i])):
-            errors.insert(er, "petlya")
-            er += 1
+    if isLoop(start_, final_):
+        errors.insert(er, "petlya")
+        er += 1
     # проверка на наличие повторяющихся ребер
     for i in range(size_):
         for j in range(size_):
