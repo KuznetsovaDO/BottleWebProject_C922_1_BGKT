@@ -18,8 +18,10 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
-    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
-    <TestFramework>Pytest</TestFramework>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,10 +49,25 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="routes_for_bfs.py">
+    <Compile Include="test_kruskal2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_kruskal1.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test_Prima1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima5.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="width.py">
@@ -62,7 +79,6 @@
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
     <Folder Include="static\img\" />
-    <Folder Include="static\data\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -122,15 +138,6 @@
       <Id>env2</Id>
       <Version>3.9</Version>
       <Description>env2 (Python 3.9 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
-    <Interpreter Include="env4\">
-      <Id>env4</Id>
-      <Version>3.9</Version>
-      <Description>env4 (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
