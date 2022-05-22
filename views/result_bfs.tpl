@@ -1,3 +1,4 @@
+
 <table><tbody>
 %for i in range(size):
                     <tr>

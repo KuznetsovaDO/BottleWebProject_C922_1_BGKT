@@ -90,9 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="result_bfs.tpl">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
@@ -129,6 +126,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\primex.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\result_bfs.tpl">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\variant1.tpl" />
