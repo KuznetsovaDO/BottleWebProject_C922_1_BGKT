@@ -1,90 +1,60 @@
-from bottle import route, view, request, response
+from bottle import route, view, request, response, template
 from datetime import datetime
-import depth_first_search
+import breadth_first_search as bfs
 
-error = ""
-
-@route('/dfs')
-@view('variant2')
-def dfs():
-    # проверяем, какая кнопка была нажата
-    if request.GET.get('Button')=="Create":
-        # получаем значение с поля ввода и записываем его в cookie
-        size_ = request.GET.get('SIZE')
-        response.set_cookie("size", size_)
-
-        return dict(
+@route('/variant1_2')
+@view('variant1')
+def variant4():
+    """Renders the about page."""
+    size = int(request.cookies.size)
+    response.set_cookie("size", str(size+1))
+    return dict(
         title='Title',
         message='Your application description page.',
         year=datetime.now().year,
-        size = int(size_),
-        check = 'false',
-        error = error,
-        start=1
-        )
+        size = size + 1
+    )
 
-    if request.GET.get('Button')=="Send":
-        # берем из куки размер матрицы
+@route('/variant1_3')
+@view('variant1')
+def variant4():
+    """Renders the about page."""
+    size = int(request.cookies.size)
+    response.set_cookie("size", str(size-1))
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year,
+        size = size - 1
+    )
+
+@route('/variant1_4', method = "GET")
+@view('variant1')
+def variant4():
+    #CЧИТЫВАНИЕ МАТРИЦЫ В МАССИВ
+    #получаем размер матрицы
+    size = int(request.cookies.size)
+    #создаем пустой массив
+    adj_matrix = []
+    #проходимся по строкам в массиве
+    for i in range(size):
+        #значения строки записываются сюда
+        row = []
+        #проходимся по элементам в строке
+        for j in range(size):
+            #считываем значения из ячейки в матрице и добавляем его в массив строки
+            row.append(int(request.GET.get(str(i)+'_'+str(j))))
+        #добавляем строку в двумерный массив
+        adj_matrix.append(row)
+    result = bfs.shirina(adj_matrix,3)
+    
+    
+    return template("result_bfs", size = size,matrix1 = adj_matrix, matrix2 = result[1], path = result[0])
+
+@route('result_bfs')
+@view('result_bfs')
+def result():
+    return dict (
         size = int(request.cookies.size)
-        start = request.GET.get('START')
-        
-        matrix = [] #матрица
-        count = 0 #количество ребер
-
-        # заполняем матрицу нулями
-        for i in range(size):
-            row = []
-            for j in range(size):
-                row.append(0)
-            matrix.append(row)
-
-        # считываем введенную матрицу
-        for i in range(size):
-            for j in range(size):
-                if (str(request.GET.get(str(i)+'_'+str(j)))=='1'):
-                    matrix[i][j]=1
-                    matrix[j][i]=1
-                    count+=1
-        # проверка на связность графа
-        if count < size-1:
-            return dict(
-            title='Title',
-            message='Your application description page.',
-            year=datetime.now().year,
-            size = int(size),
-            check = 'false',
-            error = "Please enter a connected graph"
-            )
-
-        # преобразуем в словарь смежных вершин
-        inc = {}
-        for i in range(size):
-            row=[]
-            for j in range(size):
-                if (matrix[i][j] == 1):
-                    row.append(j)
-            inc[i]=row
-        
-        # находим остовное дерево
-        result = depth_first_search.DFS(inc, int(start)-1)
-
-        f = open("data_dfs.txt", 'a')
-        try:
-            # работа с файлом
-            f.write(str(datetime.now()) + " Входные данные: " + str(matrix) + "\n Результат: " + str(result["matrix"])+ "\n")
-        finally:
-            f.close()
-
-        return dict(
-            title='Title',
-            message='Your application description page.',
-            year=datetime.now().year, 
-            size = size,
-            check = 'true',
-            result = result["matrix"], 
-            matrix = matrix,
-            error = error, 
-            start = start, 
-            sequence = result["sequence"]
         )
 
