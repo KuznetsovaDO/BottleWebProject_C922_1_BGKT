@@ -66,7 +66,14 @@ def dfs():
             inc[i]=row
         
         # находим остовное дерево
-        result = depth_first_search.DFS(inc, start)
+        result = depth_first_search.DFS(inc, int(start)-1)
+
+        f = open("data_dfs.txt", 'a')
+        try:
+            # работа с файлом
+            f.write(str(datetime.now()) + " Входные данные: " + str(matrix) + "\n Результат: " + str(result["matrix"])+ "\n")
+        finally:
+            f.close()
 
         return dict(
             title='Title',
@@ -74,8 +81,9 @@ def dfs():
             year=datetime.now().year, 
             size = size,
             check = 'true',
-            result = result, 
+            result = result["matrix"], 
             matrix = matrix,
             error = error, 
-            start = start
+            start = start, 
+            sequence = result["sequence"]
         )

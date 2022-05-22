@@ -34,7 +34,7 @@
 
             <!-- Поле для ввода -->
             <div align = "center">
-                <input class="matrix_size" type="number" placeholder="size" name = "SIZE" value="{{size}}" min = "1" border="5">
+                <input class="matrix_size" type="number" placeholder="size" name = "SIZE" value="{{size}}" min = "2" border="5">
             </div>
 
             <!-- Кнопка "Создать матрицу" -->
@@ -46,7 +46,7 @@
             <div style="margin: 5% ; width: 40%; float:right;">
                 <p align="center" class="step_title">Starting vertex</p>
                 <div align = "center">
-                    <input class="matrix_size" type="number" placeholder="vertex" name = "START" value="{{start}}" min = "1">
+                    <input class="matrix_size" type="number" placeholder="vertex" name = "START" value="{{start}}" min = "1" max = "{{size}}">
                 </div>
             </div>
             <br style="clear:both;"/>
@@ -87,7 +87,7 @@
                 %end
         </table></tbody>
         <!-- Кнопка -->
-        <button style="margin: 10px" class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
+        <button class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
     </form> 
 
     <!-- Вывод матрицы остовного дерева -->
@@ -102,5 +102,6 @@
                 </tr>
             %end
         </tbody></table>
+        <p align="center" class="step_title">vertex traversal sequence: {{sequence}}</p>
     </body
 </div>

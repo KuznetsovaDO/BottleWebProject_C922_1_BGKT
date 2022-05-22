@@ -9,6 +9,7 @@ h1 {
     font-family: Montserrat; /* ׁולויסעגמ רנטפעמג */
     font-weight: bold;
     font-size: 22pt;
+    text-decoration: none;
 }
 
 label {
@@ -214,5 +215,18 @@ input.matrix_size[type=number] {
     -moz-animation: none;
     -o-animation: none;
     animation: none;
+}
+
+.jum {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #b0b7c6;
+    text-align: center;
+    position: center;
+    border-radius: 6px;
 }
 
