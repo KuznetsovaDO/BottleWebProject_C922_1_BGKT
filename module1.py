@@ -9,7 +9,7 @@ from datetime import datetime
 
 @post('/primansw', method='post')
 def Start():
-    #��������� �������� ���-�� ������
+    
     n = int (request.forms.get('GetValue'))
     M = np.random.randint(0,2,(n,n))
     np.fill_diagonal(M, 0)
