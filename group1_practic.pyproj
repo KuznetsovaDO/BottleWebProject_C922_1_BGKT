@@ -58,6 +58,18 @@
     <Compile Include="test_Prima1.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_Prima2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_Prima5.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="width.py">
       <SubType>Code</SubType>
     </Compile>
