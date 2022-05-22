@@ -9,7 +9,7 @@ from datetime import datetime
 
 @post('/primansw', method='post')
 def Start():
-    #получение значения кол-ва вершин
+    #пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     n = int (request.forms.get('GetValue'))
     M = np.random.randint(0,2,(n,n))
     np.fill_diagonal(M, 0)
