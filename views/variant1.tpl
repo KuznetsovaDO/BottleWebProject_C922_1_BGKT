@@ -15,7 +15,7 @@
 
     <section>
             <div style="padding: 15px;" >
-            <form action='/variant1_4'>
+            <form action='/variant1_4' method = "GET">
                 <table><tbody>
                     %for i in range(size):
                     <tr>

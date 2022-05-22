@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
-    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -47,6 +47,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="routes_for_bfs.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_Prima1.py">
       <SubType>Code</SubType>
     </Compile>
@@ -123,6 +126,15 @@
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env3\">
+      <Id>env3</Id>
+      <Version>3.8</Version>
+      <Description>env3 (Python 3.8 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
     </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
