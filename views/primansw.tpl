@@ -14,4 +14,3 @@
 		<a class="bott" href="/variant4">Back</a>
 </div>
 </html>
-
