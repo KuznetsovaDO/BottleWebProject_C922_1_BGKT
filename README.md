@@ -1,30 +1,30 @@
 # BottleWebProject_C922_1_BGKT
-Сайт для решения задач по нахождению остовных деревьев графа
+A website for solving problems of finding spanning trees of a graph
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Сайт служит для ознакомления с темой "Элементы теории графов. Неориентированные графы. Обходы графов. Остовные деревья"
-Он предназначен для поиска остовного дерева графа с помощью алгоритмов поиска «в ширину» и «в глубину»
-и поиска кратчайшего остова графа с помощью алгоритмов Краскала и Прима.
+The site serves to familiarize with the topic "Elements of graph theory. Undirected graphs. Graph traversals. Spanning trees"
+It is designed to search for the spanning tree of a graph using search algorithms "in width" and "in depth"
+and search for the shortest backbone of the graph using the algorithms of Kraskal and Prima.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1. Реализованная функциональность
+1. Implemented functionality
 
-* Переход на вкладки "Depth - first search", "Breadth-first search", "Kruskal`s algorithm", "The Prim`s algorithm"
-* Пролистывание страниц
-* По нажатию кнопок и ссылок переход к информации о графах
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-2. Особенность проекта
-
-* Анимированное отображение примеров для работы с алгоритмами
-* Видео с разбором алгоритма Краскала
-* Эргономичный и минималистичный дизайн 
-* Стильный вывод предупреждений и ошибок
-
+* Go to the tabs "Depth - first search", "Breadth-first search", "Kruskal's algorithm", "The Prime's algorithm"
+* Scrolling through pages
+* By clicking buttons and links, go to information about graphs
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-3. Основной стек технологий
+2. Feature of the project
+
+* Animated display of examples for working with algorithms
+* Video analysis of the Kruskal algorithm
+* Ergonomic and minimalistic design 
+* Stylish output of warnings and errors
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+3. The main technology stack
 
 * HTML, CSS
 * Python
@@ -33,32 +33,32 @@
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-4. Среда запуска
+4. Startup Environment
 
-* Развертывание сервиса производится на debian-like linux (debian 9+);
-* Для запуска требуется Visual Studio 2019 и выше
-* Требуется установленный web-сервер с поддержкой PHP
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-5. Загрузка с GitHub
-
-* Для запуска требуется Visual Studio 2019 и выше
-* Необходимо выгрузить проект с репозитория Git по ссылке https://github.com/KuznetsovaDO/BottleWebProject_C922_1_BGKT
-* При необходимости поменять среду окружения 
-* В среду окружения необходимо устрановить библиотеки: numpy, pytest
+* The service is deployed on debian-like linux (debian 9+);
+* Requires Visual Studio 2019 and higher to run
+* Requires an installed web server with PHP support
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-6. Реализация функций
+5. Download from GitHub
 
-* Балова Тамара - реализация страницы с алгоритмом Краскала, реализация страницы "about us", работа с дизайном сайта
-* Грибанов Евгений - реализация страницы с алгоритмом Прима и главной страницы, работа с дизайном сайта
-* Кузнецова Диана - реализация страницы с алгоритмом поиска "в глубину", работа с дизайном сайта
-* Течуешева София - реализация страницы с алгоритмом поиска "в ширину", работа с дизайном сайта
+* Requires Visual Studio 2019 and higher to run
+* You need to download the project from the Git repository using the link https://github.com/KuznetsovaDO/BottleWebProject_C922_1_BGKT
+* Change the environment if necessary 
+* Libraries must be installed in the environment environment: numpy, pytest
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+6. Implementation of functions
+
+* Tamara Balova - implementation of the page with the Kraskala algorithm, implementation of the "about us" page, work with website design
+* Evgeny Gribanov - implementation of the page with the algorithm of the Prime and the main page, work with the design of the site
+* Diana Kuznetsova - implementation of a page with a search algorithm "in depth", work with the design of the site
+* Techuesheva Sofia - implementation of a page with a search algorithm "in width", work with the design of the site
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-7. Авторы
+7. Authors
 
-Балова Тамара, Грибанов Евгений, Кузнецова Диана, Течуешева София
+Tamara Balova, Evgeny Gribanov, Diana Kuznetsova, Sofia Techuesheva
