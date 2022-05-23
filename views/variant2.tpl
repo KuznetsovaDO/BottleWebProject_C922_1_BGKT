@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 % rebase('layout.tpl', title=title, year=year)
-<div class="jumbotron">
+
     <head>
 		    <meta charset="utf-8">
 		    <title>DFS algorithm</title>
@@ -8,17 +8,23 @@
 		    <link href="/static/content/style.css" rel="stylesheet">
             
     </head>
-
+    <div class="jumbotron">
     <body class="var2">
+    
     <form action="/dfs" method = "GET">
         <!-- Заголовок (название метода) -->
         <h1 align = center>Depth-first search algorithm</h1>
         <!-- Описание метода -->
         <div style="width: inherit">
-            <div style=" margin: 5% ; width: 45%; float:left;">
+            <div style=" margin: 2% 4.5% ; width: 50%; float:left;">
                 <!--Текст описания-->
-                <label>"Depth-first search (DFS) is a recursive algorithm for traversing a tree or graph, starting at the root vertex (in the case of a graph, an arbitrary vertex can be selected) 
-                and recursively traversing the entire graph, visiting each vertex exactly once."</label> 
+                <label class="description">Depth-first search (DFS) is a recursive algorithm for traversing a tree or graph, starting at the root vertex (an arbitrary vertex can be selected) 
+                and recursively traversing the entire graph, visiting each vertex exactly once.</label>
+                <label class="description desc-bold">How to use the calculator?</label>
+
+                <label class="description">1. Enter the size of the adjacency matrix (the number of vertices in the graph).</label>
+                <label class="description">2. Enter half of the matrix, the second half will be filled in symmetrically automatically. The graph of the adjacency matrix must be connected.</label>
+                <label class="description">3. Enter the starting vertex of the graph to traverse.</label>
             </div>
             <div style="width: 40%; float:right;">
                 <!-- Анимация обхода -->
@@ -28,37 +34,27 @@
         </div>
 
         <!-- Форма для ввода размера матрицы -->
-        <div style="width: inherit">
-            <div style=" margin: 5% ; width: 40%; float:left;">
-            <p align="center" class="step_title">Matrix size:</p>
+      
+            <p align="center" class="step_title">1. Enter a matrix size:</p>
 
             <!-- Поле для ввода -->
             <div align = "center">
-                <input class="matrix_size" type="number" placeholder="size" name = "SIZE" value="{{size}}" min = "2" border="5">
-            </div>
+                <input class="matrix_size matrix_size2" type="number" placeholder="size" name = "SIZE" value="{{size}}" min = "2" border="5">
+            
 
             <!-- Кнопка "Создать матрицу" -->
-            <div>
-                <button style="margin: 10px 0px 5%" class="button button1 hh2" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
+            
+                <button align = "center" class="step_button" type="submit" value="Create" name = "Button"  href="/variant2">create</button>
             </div>
-            </div>
-
-            <div style="margin: 5% ; width: 40%; float:right;">
-                <p align="center" class="step_title">Starting vertex</p>
-                <div align = "center">
-                    <input class="matrix_size" type="number" placeholder="vertex" name = "START" value="{{start}}" min = "1" max = "{{size}}">
-                </div>
-            </div>
-            <br style="clear:both;"/>
-
-        </div>
+            
+        
 
         <!-- Для вывода сообщения об ошибке -->
         <p class="error">{{error}}</p>
 
         <!-- Таблица для вводы матрицы -->
         <table align="center">
-            <p align="center" class="step_title">Enter the matrix:</p>
+            <p align="center" class="step_title">2. Enter the matrix:</p>
             <tbody>
                 <!-- Цикл для создания строк матрицы -->
                 %for i in range(size):
@@ -86,8 +82,14 @@
                     </tr>
                 %end
         </table></tbody>
+        
+        <div style = "margin: 2%" align = "center">
+            <p  class="step_title">3. Enter starting vertex</p>
+            <input class="matrix_size matrix_size2" type="number" placeholder="vertex" name = "START" value="{{start}}" min = "1" max = "{{size}}">
+        
         <!-- Кнопка -->
-        <button class="button button1 hh2" type="submit" value="Send" name = "Button" >find the spanning tree</button>
+        <button class="step_button" type="submit" value="Send" name = "Button" >find the spanning tree</button>
+        </div>
     </form> 
 
     <!-- Вывод матрицы остовного дерева -->
@@ -103,5 +105,7 @@
             %end
         </tbody></table>
         <p align="center" class="step_title">vertex traversal sequence: {{sequence}}</p>
-    </body
-</div>
+  </body>
+ </div>
+</html>
+

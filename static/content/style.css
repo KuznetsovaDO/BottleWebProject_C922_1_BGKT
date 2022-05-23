@@ -87,7 +87,12 @@ input.matrix_size[type=number] {
     padding: 5px;
     border: 2px solid #ccc;
     -webkit-border-radius: 5px;
-    border-radius: 5px
+    border-radius: 5px;
+}
+
+.matrix_size2 {
+    max-height: 2em;
+    max-width: 200px;
 }
 
 /*Вывод сообщения об ошибке*/
@@ -95,6 +100,53 @@ input.matrix_size[type=number] {
     text-align: center;
     color: red;
 }
+/*Кнопка поменьше*/
+.step_button {
+    display: table;
+    cursor: pointer;
+    color: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    background-color: transparent;
+    margin: 0;
+    -webkit-text-decoration-skip: objects;
+    font-style: initial;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 0;
+    align-self: flex-start;
+    color: #ffffff !important;
+    background-color: #4caf50 !important;
+    pointer-events: initial;
+    border-style: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 2%;
+    border-top-left-radius: 50px !important;
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.desc-bold {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
 
 .bott {
     display: block;

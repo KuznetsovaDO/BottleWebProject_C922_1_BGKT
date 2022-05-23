@@ -1,0 +1,124 @@
+2022-05-22 20:15:15.182136
+Matrix: 
+0 2 0 0 
+2 0 0 5 
+0 0 0 0 
+0 5 0 0 
+
+Starting with B
+Connection B in A [2]
+Connection B in D [5]
+There are no ways
+All the way: 7
+2022-05-22 20:15:20.423933
+Matrix: 
+0 0 0 0 
+0 0 1 6 
+0 1 0 0 
+0 6 0 0 
+
+Starting with A
+There are no ways
+All the way: 0
+2022-05-22 20:15:26.332737
+Matrix: 
+0 0 0 0 0 
+0 0 3 0 7 
+0 3 0 2 8 
+0 0 2 0 5 
+0 7 8 5 0 
+
+Starting with D
+Connection D in C [2]
+Connection C in B [3]
+Connection D in E [5]
+There are no ways
+All the way: 10
+2022-05-22 20:15:35.311679
+Matrix: 
+0 0 0 5 0 
+0 0 0 3 0 
+0 0 0 0 6 
+5 3 0 0 5 
+0 0 6 5 0 
+
+Starting with D
+Connection D in B [3]
+Connection D in A [5]
+Connection D in E [5]
+Connection E in C [6]
+All the way: 19
+2022-05-22 20:15:40.953327
+Matrix: 
+0 8 0 3 0 0 0 
+8 0 0 3 7 0 0 
+0 0 0 0 0 0 0 
+3 3 0 0 2 4 0 
+0 7 0 2 0 0 7 
+0 0 0 4 0 0 0 
+0 0 0 0 7 0 0 
+
+Starting with G
+Connection G in E [7]
+Connection E in D [2]
+Connection D in A [3]
+Connection D in B [3]
+Connection D in F [4]
+There are no ways
+All the way: 19
+2022-05-22 20:15:46.737594
+Matrix: 
+0 4 8 2 0 0 8 
+4 0 0 3 3 0 2 
+8 0 0 0 1 4 0 
+2 3 0 0 8 2 4 
+0 3 1 8 0 8 0 
+0 0 4 2 8 0 0 
+8 2 0 4 0 0 0 
+
+Starting with A
+Connection A in D [2]
+Connection D in F [2]
+Connection D in B [3]
+Connection B in G [2]
+Connection B in E [3]
+Connection E in C [1]
+All the way: 13
+2022-05-22 20:15:52.590860
+Matrix: 
+0 6 2 0 0 5 8 0 2 
+6 0 5 2 5 7 3 4 1 
+2 5 0 0 7 3 7 5 0 
+0 2 0 0 3 3 0 0 0 
+0 5 7 3 0 4 3 0 7 
+5 7 3 3 4 0 5 0 0 
+8 3 7 0 3 5 0 5 0 
+0 4 5 0 0 0 5 0 2 
+2 1 0 0 7 0 0 2 0 
+
+Starting with I
+Connection I in B [1]
+Connection I in A [2]
+Connection I in H [2]
+Connection B in D [2]
+Connection A in C [2]
+Connection B in G [3]
+Connection D in E [3]
+Connection D in F [3]
+All the way: 18
+2022-05-22 20:22:23.491967
+Matrix: 
+0 3 6 0 6 6 
+3 0 0 0 0 5 
+6 0 0 2 0 4 
+0 0 2 0 0 3 
+6 0 0 0 0 0 
+6 5 4 3 0 0 
+
+Starting with E
+Connection E in A [6]
+Connection A in B [3]
+Connection B in F [5]
+Connection F in D [3]
+Connection D in C [2]
+All the way: 19

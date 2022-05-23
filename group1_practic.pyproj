@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>group1_practic</Name>
     <RootNamespace>group1_practic</RootNamespace>
-    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
@@ -49,6 +49,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="route_for_bfs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_DFS.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_kruskal2.py">
       <SubType>Code</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Content Include="views\primex.tpl">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\result_bfs.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\variant1.tpl" />
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />
@@ -134,10 +143,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env2\">
-      <Id>env2</Id>
+    <Interpreter Include="env\">
+      <Id>env</Id>
       <Version>3.9</Version>
-      <Description>env2 (Python 3.9 (64-bit))</Description>
+      <Description>env (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

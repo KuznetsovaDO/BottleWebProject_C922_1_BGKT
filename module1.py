@@ -1,7 +1,7 @@
 import random
 from string import ascii_uppercase
 from bottle import post, request
-from bottle import template
+from bottle import template, route, response
 import re
 import numpy as np
 import Prima1
@@ -9,6 +9,7 @@ from datetime import datetime
 
 @post('/primansw', method='post')
 def Start():
+    
     n = int (request.forms.get('GetValue'))
     M = np.random.randint(0,2,(n,n))
     np.fill_diagonal(M, 0)
@@ -26,4 +27,11 @@ def Start():
     print (f)
 
     ans = ("Matrix: " + "\n"+ f + "\n" + Prima1.prima(W))
+
+    wrFile = open("prim_rez.txt", 'a')
+    try:
+        wrFile.write(str(datetime.now()) + "\n" + ans + "\n")
+    finally:
+        wrFile.close()
+    
     return template ('primansw', title='The Prim`s algorithm', year = datetime.now().year, ans = ans)
