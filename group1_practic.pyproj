@@ -52,6 +52,12 @@
     <Compile Include="route_for_bfs.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_BFS1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_BFS2.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_DFS.py">
       <SubType>Code</SubType>
     </Compile>
