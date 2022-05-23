@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\ewgen\Desktop\fromgit2\env5"
+VIRTUAL_ENV="D:\Desktop\practica\rep\env5"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
