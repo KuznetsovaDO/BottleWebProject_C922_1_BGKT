@@ -66,9 +66,9 @@
                                             %for j in range(size):
                                                 <!-- Ниже диагонали ячейки для ввода недоступны для симметричности-->  
                                                 %if i>=j:
-                                                    <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 2.5em;" name="{{i}}_{{j}}" disabled ></td>
+                                                    <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  class = "cell_bfs"  name="{{i}}_{{j}}" disabled ></td>
                                                 %else:
-                                                    <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 2.5em;" name="{{i}}_{{j}}"></td>
+                                                    <td><input type="number" value = "0" min="0" max="1" inputmode="numeric" class = "cell_bfs"  name="{{i}}_{{j}}"></td>
                                                 %end
                                             %end
                                         </tr>
@@ -76,17 +76,25 @@
                                     </tbody></table>
                                     <div >
                                         <div style=" margin: 2% ; width: 50%; float:left;" >
+                                            %if size < 10:
                                             <!--Кнопка для добавления вершины-->
                                             <button align = "center" class="step_button" onclick = '/variant1_4' type="submit" value="Add" name = "Button" >add a vertex</button>
+                                            %else: 
+                                            <button align = "center" class="step_button" onclick = '/variant1_4' type="submit" value="Add" name = "Button" disabled >add a vertex</button>
+                                            %end
                                         </div>
                                         <div style="margin: 2% ; width: 40%; float:right;">
+                                            %if size > 2 :
                                             <!-- Кнопка для удаления вершины -->
                                             <button align="center" class="step_button" onclick = '/variant1_4' type="submit" value="Remove" name = "Button" >remove a vertex</button>
+                                            %else:
+                                            <button align="center" class="step_button" onclick = '/variant1_4' type="submit" value="Remove" name = "Button" disabled >remove a vertex</button>
+                                            %end
                                         </div>
                                         <br style="clear:both;"/>
                                     </div>
                                     <!-- Кнопка для решения -->
-                                    <button class="button button1 hh2" type="submit" value="Find" name = "Button" >find the spanning tree</button>                                                                                                 
+                                    <button class="button button1 hh2" type="submit" value="Find" name = "Button" >FIND THE SPANNING TREE</button>                                                                                                 
                                 </div>
                             </div>
                         </form>
