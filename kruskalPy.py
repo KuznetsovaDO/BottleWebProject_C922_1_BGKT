@@ -112,9 +112,14 @@ def kruskal_yu():
             if i not in D[r[1]]:
                 errors.insert(er, "ne svyazan")
                 er += 1
-
+    # запись данных в файл
     if er == 0:
         jsonIn = "Time " + str(datetime.now()) + "; Input " + str(R) + "; Output " + str(T)
+        with open('inData.json', 'a') as file:
+            json.dump(jsonIn, file)
+            file.write('\n')
+    else:
+        jsonIn = "Time " + str(datetime.now()) + "; Input " + str(R) + "; Output errors"
         with open('inData.json', 'a') as file:
             json.dump(jsonIn, file)
             file.write('\n')
