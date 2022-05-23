@@ -9,7 +9,7 @@
 </head>
 <form action = "/primansw" method="post">
      <label align=center>{{title_size}}</label>
-     <br \><br \>
+     <br>
      <p class="hhh">How does it work?</p>
      <h1></h1>
      <h1></h1>
@@ -21,7 +21,7 @@ It is convenient to represent the graph as a matrix of connections.</p>
      <a href="/primex" style="text-decoration: none;">
         <p class="hh2">Example</p>
      </a>
-    <br \><br \>
+    <br >
      <p class="hhh">Enter the number of vertices:</p>
       <style>
        select{width: 110px;}
