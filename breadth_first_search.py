@@ -50,3 +50,6 @@ def shirina(mass, start):
     bfs(start)
     dict= [BFS,matrix]
     return dict
+
+#m = [[0, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 0, 0, 0, 0]]
+#res = shirina()

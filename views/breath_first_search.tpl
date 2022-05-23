@@ -2,7 +2,7 @@
 % rebase('layout.tpl', title=title, year=year)
 <body>
 <div class="jumbotron">
-
+    
     <head>
 	    <meta charset="utf-8">
 	    <title>BFS algorithm</title>
@@ -12,7 +12,7 @@
 
 
    
-    <form action='/bfs' method = "GET">
+    
         <!-- Заголовок (название метода) -->
         <h1 align = center>Breadth-first search algorithm</h1>
         <!-- Описание метода -->
@@ -29,19 +29,24 @@
             </div>
             <br style="clear:both;"/>
         </div>
-
+    <form action='/bfs' method = "GET">
         <!-- Вывод размера матрицы -->
         <div style="width: inherit">
             <div style=" margin: 5% ; width: 40%; float:left;">
                 <label align="center" class="step_title" >Dimension of the matrix: {{size}} X {{size}} </label> 
-                
+                <label>Start vertex</label>
+                <input type ="number" name = "start" value = "1">
                 <!-- Таблица для ввода матрицы -->
                 <table><tbody>
                     %for i in range(size):
                     <tr>
                         %for j in range(size):
-                            <!-- Ниже диагонали ячейки для ввода недоступны для симметричности-->       
-                            <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" ></td>
+                            <!-- Ниже диагонали ячейки для ввода недоступны для симметричности-->  
+                            %if i>=j:
+                                <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}" disabled ></td>
+                            %else:
+                                <td><input type="number" value = "0" min="0" max="1" inputmode="numeric"  style="max-width: 3.0em;" name="{{i}}_{{j}}"></td>
+                            %end
                         %end
                     </tr>
                     %end

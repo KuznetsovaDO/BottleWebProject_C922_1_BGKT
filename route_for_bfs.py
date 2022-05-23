@@ -32,17 +32,25 @@ def bfs():
         #CЧИТЫВАНИЕ МАТРИЦЫ В МАССИВ
         #получаем размер матрицы
         size = int(request.cookies.size)
+        #получаем стартовую вершину
+        start = int(request.GET.get("start"))
         #создаем пустой массив
         adj_matrix = []
-        #проходимся по строкам в массиве
+        #заполняем массив нулями
         for i in range(size):
-            #значения строки записываются сюда
             row = []
+            for j in range(size):
+                row.append(0)
+            adj_matrix.append(row)
+                
+        #проходимся по строкам в вводимом массиве
+        for i in range(size):
             #проходимся по элементам в строке
             for j in range(size):
-                #считываем значения из ячейки в матрице и добавляем его в массив строки
-                row.append(int(request.GET.get(str(i)+'_'+str(j))))
-            #добавляем строку в двумерный массив
-            adj_matrix.append(row)
-        result = BFS.shirina(adj_matrix, 1)  
+                if str(request.GET.get(str(i)+'_'+str(j)))=="1":
+                    #считываем значения из ячейки в матрице и добавляем его в массив строки
+                    adj_matrix[i][j] = 1
+                    adj_matrix[j][i] = 1
+            
+        result = BFS.shirina(adj_matrix, start)  
         return template("result_bfs", size = size, matrix1 = adj_matrix, matrix2 = result[1], path = result[0])
