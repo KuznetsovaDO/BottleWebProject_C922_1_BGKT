@@ -282,3 +282,26 @@ input.matrix_size[type=number] {
     border-radius: 6px;
 }
 
+/* Стиль для страницы BFS, расположение элементов с помощью таблицы*/
+#maket {
+    width: 100%; /* Ширина всей таблицы */
+}
+
+TD {
+    vertical-align: top; /* Вертикальное выравнивание в ячейках */
+    padding: 5px; /* Поля вокруг ячеек */
+}
+
+TD#leftcol {
+    width: 350px; /* Ширина левой колонки */
+    background: #b0b7c6; /* Цвет фона левой колонки */
+    font-size: 10pt
+}
+
+TD#rightcol {
+    background: #eeeeee; /* Цвет фона правой колонки */
+        
+}
+
+
+

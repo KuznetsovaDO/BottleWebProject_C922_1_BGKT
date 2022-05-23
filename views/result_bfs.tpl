@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 
 <table><tbody>
 %for i in range(size):
@@ -29,3 +31,4 @@
     <input style="width: 40% " type="text" value = "{{path}}"  style="max-width: 3.0em;" name="path" >
 
 </label>
+</html>
