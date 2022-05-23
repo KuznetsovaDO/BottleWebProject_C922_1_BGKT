@@ -16,7 +16,7 @@ def home():
 
 
 @route('/variant2')
-@view('variant2')
+@view('depth_first_search')
 def variant2():
    response.set_cookie("size", "4")
    return dict(

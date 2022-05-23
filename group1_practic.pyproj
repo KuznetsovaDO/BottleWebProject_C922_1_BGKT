@@ -135,7 +135,7 @@
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
-    <Content Include="views\variant2.tpl">
+    <Content Include="views\depth_first_search.tpl">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\prim_algorithm.tpl">
