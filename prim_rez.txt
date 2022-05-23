@@ -122,3 +122,33 @@ Connection B in F [5]
 Connection F in D [3]
 Connection D in C [2]
 All the way: 19
+2022-05-23 01:16:29.445045
+Matrix: 
+0 1 0 7 0 
+1 0 1 0 0 
+0 1 0 0 7 
+7 0 0 0 0 
+0 0 7 0 0 
+
+Starting with C
+Connection C in B [1]
+Connection B in A [1]
+Connection C in E [7]
+Connection A in D [7]
+All the way: 16
+2022-05-23 14:11:43.517350
+Matrix: 
+0 0 0 0 1 2 
+0 0 2 6 1 2 
+0 2 0 4 5 0 
+0 6 4 0 2 3 
+1 1 5 2 0 0 
+2 2 0 3 0 0 
+
+Starting with C
+Connection C in B [2]
+Connection B in E [1]
+Connection E in A [1]
+Connection B in F [2]
+Connection E in D [2]
+All the way: 8

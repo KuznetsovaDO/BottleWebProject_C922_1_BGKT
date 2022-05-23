@@ -5,7 +5,7 @@ import depth_first_search
 error = ""
 
 @route('/dfs')
-@view('variant2')
+@view('depth_first_search')
 def dfs():
     # проверяем, какая кнопка была нажата
     if request.GET.get('Button')=="Create":

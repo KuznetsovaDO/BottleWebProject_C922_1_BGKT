@@ -11,7 +11,6 @@
  <p class="hhh">The Prim`s algorithm answer:</p>
  <p class="hh2">{{ ans }}</p>
  <br></br>
-		<a class="bott" href="/variant4">Back</a>
+		<a class="button button1 hh2" href="/prim_algorithm">Back</a>
 </div>
 </html>
-

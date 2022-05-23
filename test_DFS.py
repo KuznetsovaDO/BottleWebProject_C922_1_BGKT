@@ -14,7 +14,7 @@ class Test_dfs(unittest.TestCase):
                 7: [0, 1, 2, 6],
                 8: [3],
             }
-        result = [0, 1,2, 3, 6, 4, 5, 7, 8]
+        result = [1, 2,3, 4, 7, 5, 6, 8, 9]
         self.assertEqual(depth_first_search.DFS(inc, 0)["sequence"], result)
 
 if __name__ == '__main__':

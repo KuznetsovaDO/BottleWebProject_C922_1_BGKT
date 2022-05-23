@@ -21,7 +21,7 @@
 		<p class="hh2">4) In the lines of the fragment (1 and 4), we are looking for the min number (versh. 3 is the value of 5). Soed. 1 and 3</p>
 		<p class="hh2">5) Repeat item 4 for the received fragment</p>
 		<br></br>
-		<a class="bott" href="/variant4">Back</a>
+		<a class="button button1 hh2" href="/prim_algorithm">Back</a>
 
 
 

@@ -3,7 +3,7 @@ from datetime import datetime
 import breadth_first_search as bfs
 
 @route('/variant1_2')
-@view('variant1')
+@view('breath_first_search')
 def variant4():
     """Renders the about page."""
     size = int(request.cookies.size)
@@ -16,7 +16,7 @@ def variant4():
     )
 
 @route('/variant1_3')
-@view('variant1')
+@view('breath_first_search')
 def variant4():
     """Renders the about page."""
     size = int(request.cookies.size)
@@ -29,7 +29,7 @@ def variant4():
     )
 
 @route('/variant1_4', method = "GET")
-@view('variant1')
+@view('breath_first_search')
 def variant4():
     #CЧИТЫВАНИЕ МАТРИЦЫ В МАССИВ
     #получаем размер матрицы

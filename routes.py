@@ -16,7 +16,7 @@ def home():
 
 
 @route('/variant2')
-@view('variant2')
+@view('depth_first_search')
 def variant2():
    response.set_cookie("size", "4")
    return dict(
@@ -31,7 +31,7 @@ def variant2():
 
 
 @route('/variant1')
-@view('variant1')
+@view('breath_first_search')
 def variant4():
     """Renders the about page."""
     size = 5
@@ -68,8 +68,8 @@ def kruskal():
             sizeVertic = 2
             )
 
-@route('/variant4')
-@view('variant4')
+@route('/prim_algorithm')
+@view('prim_algorithm')
 def variant4():
     return dict(
         title='The Prim`s algorithm',
