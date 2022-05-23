@@ -131,7 +131,7 @@
     <Content Include="views\result_bfs.tpl">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\variant1.tpl" />
+    <Content Include="views\breath_first_search.tpl" />
     <Content Include="views\kruskal.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
