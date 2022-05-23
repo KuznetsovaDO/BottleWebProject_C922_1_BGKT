@@ -38,7 +38,7 @@ It is convenient to represent the graph as a matrix of connections.</p>
          </select>
      </p>
     <!--<a href="post" class="fciA navItem"><span class="fciSpan">Demo</span></a>-->
-     <button class="bott">{{title_enter}}</button>
+     <button class="button button1 hh2">{{title_enter}}</button>
 
     
 </form>
