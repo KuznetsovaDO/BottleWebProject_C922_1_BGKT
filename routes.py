@@ -68,8 +68,8 @@ def kruskal():
             sizeVertic = 2
             )
 
-@route('/variant4')
-@view('variant4')
+@route('/prim_algorithm')
+@view('prim_algorithm')
 def variant4():
     return dict(
         title='The Prim`s algorithm',

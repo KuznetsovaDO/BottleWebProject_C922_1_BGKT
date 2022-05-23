@@ -183,3 +183,19 @@ Connection A in B [4]
 Connection D in C [5]
 Connection B in E [5]
 All the way: 17
+2022-05-23 13:20:18.904408
+Matrix: 
+0 7 0 8 8 0 
+7 0 0 0 0 7 
+0 0 0 0 0 4 
+8 0 0 0 0 0 
+8 0 0 0 0 4 
+0 7 4 0 4 0 
+
+Starting with E
+Connection E in F [4]
+Connection F in C [4]
+Connection F in B [7]
+Connection B in A [7]
+Connection A in D [8]
+All the way: 30

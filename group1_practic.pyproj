@@ -138,7 +138,7 @@
     <Content Include="views\variant2.tpl">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\variant4.tpl">
+    <Content Include="views\prim_algorithm.tpl">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

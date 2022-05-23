@@ -59,7 +59,7 @@
     <div class="jum" align=center>
     <div class="row">
     <div class="row-md-4">
-    <a href="/variant4" style="text-decoration: none;">
+    <a href="/prim_algorithm" style="text-decoration: none;">
         <h2 class="hhh">The Prim`s algorithm</h2>
         </a>
         <p class="hh2">
