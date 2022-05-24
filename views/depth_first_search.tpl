@@ -1,6 +1,6 @@
     <!DOCTYPE html>
 % rebase('layout.tpl', title=title, year=year)
-
+<body>
     <head>
 		    <meta charset="utf-8">
 		    <title>DFS algorithm</title>
@@ -9,7 +9,7 @@
             
     </head>
     <div class="jumbotron">
-    <body class="var2">
+    
     
     <form action="/dfs" method = "GET">
         <!-- Заголовок (название метода) -->

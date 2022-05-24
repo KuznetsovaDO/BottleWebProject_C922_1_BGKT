@@ -45,33 +45,50 @@ def dfs():
                     matrix[i][j]=1
                     matrix[j][i]=1
                     count+=1
+        
         # проверка на связность графа
         if count < size-1:
+            f = open("data_dfs.txt", 'a')
+            f.write(str(datetime.now()))
+            f.write("\n Входная матрица: ")
+            for i in matrix:
+                f.write("\n"+str(i))
+            f.write(" Результат - Error. A disconnected graph is introduced.")
+
             return dict(
             title='Title',
             message='Your application description page.',
             year=datetime.now().year,
             size = int(size),
             check = 'false',
-            error = "Please enter a connected graph"
+            error = "Please enter a connected graph",
+            start=1
             )
 
         # преобразуем в словарь смежных вершин
-        inc = {}
+        graph = {}
         for i in range(size):
             row=[]
             for j in range(size):
                 if (matrix[i][j] == 1):
                     row.append(j)
-            inc[i]=row
+            graph[i]=row
         
         # находим остовное дерево
-        result = depth_first_search.DFS(inc, int(start)-1)
+        result = depth_first_search.DFS(graph, int(start)-1)
 
         f = open("data_dfs.txt", 'a')
         try:
             # работа с файлом
-            f.write(str(datetime.now()) + " Входные данные: " + str(matrix) + "\n Результат: " + str(result["matrix"])+ "\n")
+            f.write(str(datetime.now()))
+            f.write("\n Входная матрица: ")
+            for i in matrix:
+                f.write("\n"+str(i))
+            f.write("\n Стартовая вершина: "+start)
+            f.write("\n Результат: ")
+            for i in  result["matrix"]:
+                f.write("\n"+str(i))
+            f.write("\n Последовательность обхода: " + str(result["sequence"])+"\n")
         finally:
             f.close()
 

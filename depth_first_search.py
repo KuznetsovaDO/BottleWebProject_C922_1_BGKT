@@ -4,6 +4,8 @@ def DFS(inc, start):
 
     a = len(inc) 
     result_matrix = []
+
+    # заполнение матрицы нулями
     for i in range(a): 
         row = []
         for j in range(a):
