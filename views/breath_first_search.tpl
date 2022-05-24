@@ -55,7 +55,9 @@
                         <form action='/bfs' method = "GET">
                            <!-- Вывод размера матрицы -->
                             <div style="width: inherit">
-                                <div style=" margin: 5% ; width: 50%; float:center;">
+                                <div style=" margin: 5% ; width: 60%; float:center;">
+                                    <label align="center" class="step_title">1. Maximum matrix size- 10</label>
+                                    <label align="center" class="step_title">2. All vertices must have connections</label>
                                     <label align="center" class="step_title">Dimension of the matrix: {{size}}X{{size}}</label> 
                                     <label align="center" class="step_title">Start vertex</label>
                                     <input type ="number" name = "start" style=" margin: 5% ; width: 30%" value = "1" min="1" max="{{size}}">

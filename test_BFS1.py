@@ -1,3 +1,4 @@
+
 import unittest, re, breadth_first_search
 
 class Test_test_BFS1(unittest.TestCase):
@@ -23,9 +24,5 @@ class Test_test_BFS1(unittest.TestCase):
             if len(breadth_first_search.shirina(table, start)) == 0:
                 flagCor = True
         self.assertTrue(flagCor)
-        self.fail("Not implemented")
-
 if __name__ == '__main__':
     unittest.main()
-
-        

@@ -48,7 +48,7 @@
                         </div>
                     </td>
 
-                    <td id="rightcol">
+                    <td id="rightcol"> 
                        <!-- Заголовок (название метода) -->
                         <h1 align = center>Breadth-first search algorithm</h1>
                         <!--Матрица, введённая пользователем -->  
@@ -76,22 +76,16 @@
                                                         %end
                                                     </tr>
                                                     %end
-                                                </tbody></table>
                                 </tbody></table>
 
                                 <label>Spanning tree:</label> 
                                 <!--Вывод остовного дерева --> 
-                                <label>
-                                    <input style="width: 40% " readonly type="text" value = "{{path}}" class="step_title" style="max-width: 3.0em;" name="path" >
-                                </label>
+                                <input style="width: 40% " readonly type="text" value = "{{path}}" class="step_title" style="max-width: 3.0em;" name="path" >                                           
 
                             </div> 
                                 
-
                         </div>
-
-                       
-                            
+                                                   
                     </td>
                 </tr>
             </table>
