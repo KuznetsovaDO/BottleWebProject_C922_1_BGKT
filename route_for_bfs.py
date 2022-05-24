@@ -54,3 +54,13 @@ def bfs():
             
         result = BFS.shirina(adj_matrix, start)  
         return template("result_bfs", size = size, matrix1 = adj_matrix, matrix2 = result[1], path = result[0])
+
+@route('/result_bfs')
+@view('result_bfs')
+def result_bfs():
+    """Renders the about page."""
+    return dict(
+        title='Title',
+        message='Your application description page.',
+        year=datetime.now().year
+    )

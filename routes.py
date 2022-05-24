@@ -32,7 +32,7 @@ def variant2():
 
 @route('/variant1')
 @view('breath_first_search')
-def variant4():
+def variant1():
     """Renders the about page."""
     size = 5
     response.set_cookie("size", str(size))
