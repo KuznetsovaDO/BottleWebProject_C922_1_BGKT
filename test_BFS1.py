@@ -1,7 +1,7 @@
 
 import unittest, re, breadth_first_search
 
-class Test_dfs(unittest.TestCase):
+class Test_test_BFS1(unittest.TestCase):
 
     def test_A(self):
         list_table_cor = [[[0,1,0,0,0,0,0,1,0],

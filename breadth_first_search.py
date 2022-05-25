@@ -31,26 +31,32 @@ def shirina(mass, start):
                 Q.append(i) #записываем в очередь
         tempConn = [] #массив соединений
         
+        parent = 0
+        for k in matrix.keys():
+            if matrix[k][v-1] == 1:
+                parent = k+1
+        
         for j in range(len(mass[v-1])):
             fl = 1
-            parent = 0
-            for k in matrix.keys():
-                if matrix[k][v-1] == 1:
-                    parent = k
             for l in visited:
                 if l == v:
                     if mass[v-1][j] != 1:
                         fl=0
-                elif l-1 == parent:
-                    if (mass[l-1][j] == 1 or j == v-1 or mass[v-1][j] != 1):
+                elif l == parent:
+                    if mass[l-1][j] == 1 or j == v-1 or mass[v-1][j] != 1:
                         fl=0
+                else:
+                    if mass[l-1][j] == 1 and mass[parent-1][l-1] == 1 and mass[v-1][j] == 1 and j != parent-1:
+                        fl=0
+                        break
+
             if fl == 1:
                 tempConn.append(1)
             else:
                 tempConn.append(0)
         matrix[v-1] = tempConn
         while Q:
-            bfs(Q.pop(0)) #проходим по всей очереди
+            bfs(Q.pop(0))
 
 
     bfs(start) #начальная вершина обхода - start

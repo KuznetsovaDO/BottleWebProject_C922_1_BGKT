@@ -53,6 +53,13 @@ def bfs():
                     adj_matrix[j][i] = 1
             
         result = BFS.shirina(adj_matrix, start)  
+        f = open("data_bfs.txt", "a")
+        f.write("\n\n" + str(datetime.now()))
+        f.write("\nВходные данные: \n")
+        f.write(str(adj_matrix))
+        f.write("\nРезультат: \n")
+        f.write(str(result[1]) + "\n")
+        f.write(str(result[0])+"\n")
         return template("result_bfs", size = size, matrix1 = adj_matrix, matrix2 = result[1], path = result[0])
 
 @route('/result_bfs')
